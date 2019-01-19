@@ -17,12 +17,23 @@ const localizer = BigCalendar.momentLocalizer(moment);
 class CalendarContainer extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            rehearsals: rehearsals
+        };
         this.handleSelectRehearsal = this.handleSelectRehearsal.bind(this);
     }
 
-    // addTimeRangeStringToRehearsalObjects() {
-    //
-    // }
+    addTimeRangeStringToRehearsalObjects() {
+        this.state.rehearsals.forEach((rehearsal) => {
+            const startTime = rehearsal.start.toLocaleTimeString().slice(0, 5);
+            const endTime = rehearsal.end.toLocaleTimeString().slice(0, 5);
+            rehearsal.timeRange = startTime + ' - ' + endTime;
+        })
+    }
+
+    componentDidMount() {
+        this.addTimeRangeStringToRehearsalObjects();
+    }
 
     // To be used with React Big Calendars built-in onSelectEvent prop (or onDoubleClickEvent)
     // Will take user to page for the gantt chart for the rehearsal
@@ -47,11 +58,11 @@ class CalendarContainer extends Component {
                 <BigCalendar
                     className="big-calendar"
                     localizer={localizer}
-                    events={rehearsals}
+                    events={this.state.rehearsals}
                     startAccessor="start"
                     endAccessor="end"
                     titleAccessor="location"
-                    tooltipAccessor="start"
+                    tooltipAccessor="timeRange"
                     scrollToTime={scrollStartTime}
                     onSelectEvent={this.handleSelectRehearsal}
                     // components={{month: {event: EventComponent}}}
