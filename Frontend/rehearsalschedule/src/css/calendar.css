@@ -2,6 +2,10 @@
     height: 100%;
 }
 
+.big-calendar {
+    height: 700px;
+}
+
 h1 {
     color: red;
 }

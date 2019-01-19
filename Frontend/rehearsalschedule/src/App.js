@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
-import CalendarContainer from './containers/calendar/CalendarContainer';
+import CalendarContainer from './containers/calendarContainers/CalendarContainer';
 
 class App extends Component {
   render() {
