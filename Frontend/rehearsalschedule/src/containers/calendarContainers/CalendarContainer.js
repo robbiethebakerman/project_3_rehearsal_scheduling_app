@@ -1,7 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import BigCalendar from 'react-big-calendar';
-import withDragAndDrop from 'react-big-calendar/lib/addons/dragAndDrop';
-import 'react-big-calendar/lib/addons/dragAndDrop/styles.less'
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import '../../css/calendar.css';
 import moment from "moment";
@@ -37,6 +35,9 @@ class CalendarContainer extends Component {
 
     // To be used with React Big Calendars built-in onSelectEvent prop (or onDoubleClickEvent)
     // Will take user to page for the gantt chart for the rehearsal
+    // Potential alternative, create a Component or element in here and
+    // assign it to e.g., this.state.rehearsalDetail, element can be placed in render function below as a variable
+    // defaulting to null
     handleSelectRehearsal(rehearsal) {
         window.location = `/${rehearsal.id}`;
     }
