@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 
 class EventComponent extends Component {
 
@@ -8,12 +8,11 @@ class EventComponent extends Component {
     }
 
     render() {
-        const {location, start, end} = this.props.event;
-        const startTime = start.toLocaleTimeString().slice(0, 5);
-        const endTime = end.toLocaleTimeString().slice(0, 5);
+        const {location, timeRange} = this.props.event;
+
         return(
-            <div>
-                <p>{startTime} - {endTime}</p>
+            <div className="custom-rehearsal-event">
+                <p>{timeRange}</p>
                 <p>{location}</p>
             </div>
         )

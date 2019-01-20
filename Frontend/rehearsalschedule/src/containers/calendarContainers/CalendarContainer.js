@@ -1,13 +1,14 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import BigCalendar from 'react-big-calendar';
-import "react-big-calendar/lib/css/react-big-calendar.css";
+// import "react-big-calendar/lib/css/react-big-calendar.css";
+// CSS below manually imported from the default css file in react-big-calendar library
+// With all default settings in place, now free to customise as needed
+// Notes on currently customised elements are commented in the css file
+import '../../css/react-big-calendar.css';
 import '../../css/calendar.css';
 import moment from "moment";
 import rehearsals from './rehearsalsDummyData';
 import EventComponent from '../../components/calendarComponents/EventComponent.js';
-
-//Could manually adjust imported css above by copying built-in css from the node modules to current directory
-// then importing css from there instead of the node modules one, then free to override as wished
 
 //creating a localizer to be assigned to BigCalendar component (for sorting times and dates)
 const localizer = BigCalendar.momentLocalizer(moment);
@@ -66,6 +67,7 @@ class CalendarContainer extends Component {
                     tooltipAccessor="timeRange"
                     scrollToTime={scrollStartTime}
                     onSelectEvent={this.handleSelectRehearsal}
+                    // Below prop uses custom event in EventComponent.js for the month view, switched off for now
                     // components={{month: {event: EventComponent}}}
                     formats={formats}
                     popup={true}
