@@ -17,9 +17,11 @@ class CalendarContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            rehearsals: rehearsals
+            rehearsals: rehearsals,
+            rehearsalPopup: null
         };
-        this.handleSelectRehearsal = this.handleSelectRehearsal.bind(this);
+        this.handleSelectRehearsalNewPage = this.handleSelectRehearsalNewPage.bind(this);
+        this.handleSelectRehearsalShowElement = this.handleSelectRehearsalShowElement.bind(this);
     }
 
     addTimeRangeStringToRehearsalObjects() {
@@ -39,8 +41,13 @@ class CalendarContainer extends Component {
     // Potential alternative, create a Component or element in here and
     // assign it to e.g., this.state.rehearsalDetail, element can be placed in render function below as a variable
     // defaulting to null
-    handleSelectRehearsal(rehearsal) {
+    handleSelectRehearsalNewPage(rehearsal) {
         window.location = `/${rehearsal.id}`;
+    }
+
+    handleSelectRehearsalShowElement(rehearsal) {
+        const newElement = <h1>rehearsal popup element for {rehearsal.location}</h1>;
+        this.setState({rehearsalPopup: newElement});
     }
 
     render() {
@@ -66,12 +73,13 @@ class CalendarContainer extends Component {
                     titleAccessor="location"
                     tooltipAccessor="timeRange"
                     scrollToTime={scrollStartTime}
-                    onSelectEvent={this.handleSelectRehearsal}
+                    onSelectEvent={this.handleSelectRehearsalShowElement}
                     // Below prop uses custom event in EventComponent.js for the month view, switched off for now
                     // components={{month: {event: EventComponent}}}
                     formats={formats}
                     popup={true}
                 />
+                {this.state.rehearsalPopup}
             </div>
         )
     }

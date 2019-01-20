@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb5d1b6-c069-4262-b092-488a33e2ed8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/css/react-big-calendar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/calendarComponents/EventComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/calendarComponents/EventComponent.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/css/react-big-calendar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/react-big-calendar.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+            <state relative-caret-position="1104">
+              <caret line="48" column="78" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
                 <element signature="e#159#201#0" expanded="true" />
@@ -43,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/css/react-big-calendar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6325">
-              <caret line="275" column="1" lean-forward="true" selection-start-line="275" selection-start-column="1" selection-end-line="275" selection-end-column="1" />
+            <state relative-caret-position="391">
+              <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -87,8 +85,26 @@
       <find>color</find>
       <find>cell</find>
       <find>rbc-event-content</find>
+      <find>rbc-row</find>
+      <find>rbc-month-header</find>
       <find>rbc-event</find>
+      <find>rbc-selected</find>
       <find>rbc-show-more</find>
+      <find>rbc-button-group</find>
+      <find>rbc-button</find>
+      <find>rbc-btn-group</find>
+      <find>rbc-btn</find>
+      <find>rbc-active</find>
+      <find>rbc-toolbar-label</find>
+      <find>rbc-toolbar button</find>
+      <find>rbc-toolbar</find>
+      <find>rbc-month-view</find>
+      <find>rbc-day-bg</find>
+      <find>rbc-timeslot-group</find>
+      <find>rbc-time-view</find>
+      <find>rbc-time-header</find>
+      <find>rbc-time-content</find>
+      <find>rbc-agenda-table</find>
     </findStrings>
     <replaceStrings>
       <replace>location</replace>
@@ -110,8 +126,8 @@
         <option value="$PROJECT_DIR$/src/containers/components/calendarComponents/EventComponent.js" />
         <option value="$PROJECT_DIR$/src/containers/calendarContainers/rehearsalsDummyData.js" />
         <option value="$PROJECT_DIR$/src/components/calendarComponents/EventComponent.js" />
-        <option value="$PROJECT_DIR$/src/css/react-big-calendar.css" />
         <option value="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" />
+        <option value="$PROJECT_DIR$/src/css/react-big-calendar.css" />
       </list>
     </option>
   </component>
@@ -144,6 +160,18 @@
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
               <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
@@ -194,12 +222,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547908571315</updated>
-      <workItem from="1547908576027" duration="19400000" />
+      <workItem from="1547908576027" duration="23766000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19400000" />
+    <option name="totallyTimeSpent" value="23766000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -336,21 +364,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/react-big-calendar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6325">
-          <caret line="275" column="1" lean-forward="true" selection-start-line="275" selection-start-column="1" selection-end-line="275" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+        <state relative-caret-position="1104">
+          <caret line="48" column="78" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
             <element signature="e#159#201#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/react-big-calendar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="51" lean-forward="true" selection-start-line="17" selection-start-column="51" selection-end-line="17" selection-end-column="51" />
         </state>
       </provider>
     </entry>

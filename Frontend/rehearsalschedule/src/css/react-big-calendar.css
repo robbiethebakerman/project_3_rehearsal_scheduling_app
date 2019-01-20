@@ -1,6 +1,21 @@
 /*ELEMENTS TO CUSTOMISE:
   .rbc-event: The event (rehearsal) cell itself
+  .rbc-selected: Class added to event (rehearsal) when selected
   .rbc-show-more: The "Show more" link in month view
+  .rbc-btn-group: The parent element of buttons for Month, Week, Day, Agenda and Today, Back Next
+      (Child elements of this group have no className, so ".rbc-toolbar button" is used instead (See below)
+  .rbc-active: Class added to actively selected buttons
+  .rbc-toolbar button: Selector used for the above buttons themselves
+  .rbc-toolbar-label: The heading at the top of the calendar showing the month/week/day
+  .rbc-month-view: div for the whole month display - contains properties that are inherited by its children
+  .rbc-day-bg: Individual day cells on the month view - contain css for borders
+  .rbc-timeslot-group: Individual hour time slots in week / day view, including left-hand labels for them
+      - contain css for borders
+  .rbc-time-view: div for the whole week / day display
+  .rbc-time-header: div for the top part of the week / day display (meant for all-day events, not used)
+  .rbc-time-content: div for the actual event display in week / day,
+      has .rbc-timeslot-group elements as children
+  .rbc-agenda-table: tables used in the agenda view
 */
 
 .rbc-btn {
@@ -121,6 +136,16 @@ button.rbc-input::-moz-focus-inner {
   margin-bottom: 10px;
   font-size: 16px;
 }
+
+/* Below is the only styling applied to rbc-toolbar-label, i.e., it just uses default font and color. Default Settings ar as follows:
+ .rbc-toolbar .rbc-toolbar-label {
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0 10px;
+  text-align: center;
+}
+ */
 .rbc-toolbar .rbc-toolbar-label {
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
@@ -128,6 +153,8 @@ button.rbc-input::-moz-focus-inner {
   padding: 0 10px;
   text-align: center;
 }
+
+/*Styling used for buttons in the toolbar (Today, Back, Next, Month, Week, Day, Agenda). Default settings are as follows:
 .rbc-toolbar button {
   color: #373a3c;
   display: inline-block;
@@ -167,6 +194,49 @@ button.rbc-input::-moz-focus-inner {
   background-color: #e6e6e6;
   border-color: #adadad;
 }
+*/
+.rbc-toolbar button {
+  color: #373a3c;
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  vertical-align: middle;
+  background: none;
+  background-image: none;
+  border: 1px solid #ccc;
+  padding: .375rem 1rem;
+  border-radius: 4px;
+  line-height: normal;
+  white-space: nowrap;
+}
+.rbc-toolbar button:active,
+.rbc-toolbar button.rbc-active {
+  background-image: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.rbc-toolbar button:active:hover,
+.rbc-toolbar button.rbc-active:hover,
+.rbc-toolbar button:active:focus,
+.rbc-toolbar button.rbc-active:focus {
+  color: #373a3c;
+  background-color: #d4d4d4;
+  border-color: #8c8c8c;
+}
+.rbc-toolbar button:focus {
+  color: #373a3c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.rbc-toolbar button:hover {
+  color: #373a3c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+/* Below styling all determines borders of the groups of buttons so that
+they are rounded only for the ones on far right or far left of a group*/
 .rbc-btn-group {
   display: inline-block;
   white-space: nowrap;
@@ -215,7 +285,6 @@ border: none;
   cursor: pointer;
   width: 100%;
   text-align: left;*/
-
 .rbc-event {
   border: none;
   box-shadow: none;
@@ -232,9 +301,15 @@ border: none;
   cursor: inherit;
   pointer-events: none;
 }
+
+/* Styling for selected events (rehearsals). Default settings are as follows:
+background-color: #265985;*/
 .rbc-event.rbc-selected {
   background-color: #265985;
 }
+
+/* Also may influence selected event behaviour. Default settings are as follws:
+  outline: 5px auto #3b99fc;*/
 .rbc-event:focus {
   outline: 5px auto #3b99fc;
 }
@@ -283,7 +358,6 @@ border: none;
   height: auto;
   line-height: normal;
   white-space: nowrap;*/
-
 .rbc-show-more {
   background-color: rgba(255, 255, 255, 0.3);
   z-index: 4;
@@ -295,6 +369,26 @@ border: none;
   line-height: normal;
   white-space: nowrap;
 }
+
+/* div for the whole month display - contains properties that are inherited by its children. Default settings are as follows:
+  position: relative;
+  border: 1px solid #DDD;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex: 1 0 0;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  width: 100%;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  height: 100%;
+*/
 .rbc-month-view {
   position: relative;
   border: 1px solid #DDD;
@@ -371,6 +465,21 @@ border: none;
           flex: 1 0 0;
   overflow: hidden;
 }
+
+/* Styling for individual day cells on the month view, contains css for borders. Default settings are as follows:
+.rbc-day-bg {
+  -webkit-flex: 1 0 0%;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+}
+.rbc-day-bg + .rbc-day-bg {
+  border-left: 1px solid #DDD;
+}
+.rbc-rtl .rbc-day-bg + .rbc-day-bg {
+  border-left-width: 0;
+  border-right: 1px solid #DDD;
+}
+*/
 .rbc-day-bg {
   -webkit-flex: 1 0 0%;
       -ms-flex: 1 0 0%;
@@ -411,6 +520,42 @@ border: none;
           flex: 1 0 0;
   overflow: auto;
 }
+
+/* Styling for the agenda view table. Default settings are as follows:
+.rbc-agenda-view table.rbc-agenda-table {
+  width: 100%;
+  border: 1px solid #DDD;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.rbc-agenda-view table.rbc-agenda-table tbody > tr > td {
+  padding: 5px 10px;
+  vertical-align: top;
+}
+.rbc-agenda-view table.rbc-agenda-table .rbc-agenda-time-cell {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-transform: lowercase;
+}
+.rbc-agenda-view table.rbc-agenda-table tbody > tr > td + td {
+  border-left: 1px solid #DDD;
+}
+.rbc-rtl .rbc-agenda-view table.rbc-agenda-table tbody > tr > td + td {
+  border-left-width: 0;
+  border-right: 1px solid #DDD;
+}
+.rbc-agenda-view table.rbc-agenda-table tbody > tr + tr {
+  border-top: 1px solid #DDD;
+}
+.rbc-agenda-view table.rbc-agenda-table thead > tr > th {
+  padding: 3px 5px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+.rbc-rtl .rbc-agenda-view table.rbc-agenda-table thead > tr > th {
+  text-align: right;
+}
+*/
 .rbc-agenda-view table.rbc-agenda-table {
   width: 100%;
   border: 1px solid #DDD;
@@ -474,6 +619,16 @@ border: none;
       -ms-flex: 1;
           flex: 1;
 }
+
+/* Individual hour time slots in week / day view. Default settings are as follows:
+  border-bottom: 1px solid #DDD;
+  min-height: 40px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;*/
 .rbc-timeslot-group {
   border-bottom: 1px solid #DDD;
   min-height: 40px;
@@ -608,6 +763,20 @@ border: none;
 .rbc-slot-selecting {
   cursor: move;
 }
+
+/* Styling for whole week / day display. Default settings are as follows:
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 100%;
+  border: 1px solid #DDD;
+  min-height: 0;*/
 .rbc-time-view {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -653,6 +822,22 @@ border: none;
       -ms-flex-direction: row;
           flex-direction: row;
 }
+
+/* Styling for borders for top row of week / day. Default settings are as follows:
+.rbc-time-header.rbc-overflowing {
+  border-right: 1px solid #DDD;
+}
+.rbc-rtl .rbc-time-header.rbc-overflowing {
+  border-right-width: 0;
+  border-left: 1px solid #DDD;
+}
+.rbc-time-header > .rbc-row:first-child {
+  border-bottom: 1px solid #DDD;
+}
+.rbc-time-header > .rbc-row.rbc-row-resource {
+  border-bottom: 1px solid #DDD;
+}
+*/
 .rbc-time-header.rbc-overflowing {
   border-right: 1px solid #DDD;
 }
@@ -686,6 +871,44 @@ border: none;
   border-left-width: 0;
   border-right: 1px solid #DDD;
 }
+
+/* Styling for actual event display in week / day. Has rbc-timeslot-group elements as children.
+Default settings are as follows:
+.rbc-time-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 0 0%;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  border-top: 2px solid #DDD;
+  overflow-y: auto;
+  position: relative;
+}
+.rbc-time-content > .rbc-time-gutter {
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+}
+.rbc-time-content > * + * > * {
+  border-left: 1px solid #DDD;
+}
+.rbc-rtl .rbc-time-content > * + * > * {
+  border-left-width: 0;
+  border-right: 1px solid #DDD;
+}
+.rbc-time-content > .rbc-day-slot {
+  width: 100%;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+*/
 .rbc-time-content {
   display: -webkit-flex;
   display: -ms-flexbox;
