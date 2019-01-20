@@ -7,10 +7,13 @@ import BigCalendar from 'react-big-calendar';
 import '../../css/react-big-calendar.css';
 import '../../css/calendar.css';
 import moment from "moment";
+import 'moment/locale/en-gb';
 import rehearsals from './rehearsalsDummyData';
 import EventComponent from '../../components/calendarComponents/EventComponent.js';
 
-//creating a localizer to be assigned to BigCalendar component (for sorting times and dates)
+// Setting locale to en-GB (i.e., UK)) using moment,
+// then creating a localizer to be assigned to BigCalendar component (for sorting times and dates)
+moment.locale('en-GB');
 const localizer = BigCalendar.momentLocalizer(moment);
 
 class CalendarContainer extends Component {
@@ -42,7 +45,8 @@ class CalendarContainer extends Component {
     // assign it to e.g., this.state.rehearsalDetail, element can be placed in render function below as a variable
     // defaulting to null
     handleSelectRehearsalNewPage(rehearsal) {
-        window.location = `/${rehearsal.id}`;
+        // window.location = `/${rehearsal.id}`;
+        window.location = "/gantt";
     }
 
     handleSelectRehearsalShowElement(rehearsal) {
@@ -58,7 +62,20 @@ class CalendarContainer extends Component {
         const formats = {
             eventTimeRangeFormat: ({ start, end }, culture, localizer) =>
                 localizer.format(start, 'HH:mm', culture) + ' — ' +
-                localizer.format(end, 'HH:mm', culture)
+                localizer.format(end, 'HH:mm', culture),
+            agendaTimeRangeFormat: ({ start, end }, culture, localizer) =>
+                localizer.format(start, 'HH:mm', culture) + ' — ' +
+                localizer.format(end, 'HH:mm', culture),
+            dayHeaderFormat: (date, culture, localizer) =>
+                localizer.format(date, 'dddd DD MMMM YYYY', culture),
+            dayRangeHeaderFormat: ({ start, end }, culture, localizer) =>
+                localizer.format(start, 'DD MMMM YYYY' , culture) + ' — ' +
+                localizer.format(end, 'DD MMMM YYYY', culture),
+            agendaHeaderFormat: ({ start, end }, culture, localizer) =>
+                localizer.format(start, 'DD MMMM YYYY' , culture) + ' — ' +
+                localizer.format(end, 'DD MMMM YYYY', culture),
+            agendaDateFormat: (date, culture, localizer) =>
+                localizer.format(date, 'ddd DD MMM', culture)
         };
 
         return(
@@ -71,9 +88,9 @@ class CalendarContainer extends Component {
                     startAccessor="start"
                     endAccessor="end"
                     titleAccessor="location"
-                    tooltipAccessor="timeRange"
+                    tooltipAccessor="location"
                     scrollToTime={scrollStartTime}
-                    onSelectEvent={this.handleSelectRehearsalShowElement}
+                    onSelectEvent={this.handleSelectRehearsalNewPage}
                     // Below prop uses custom event in EventComponent.js for the month view, switched off for now
                     // components={{month: {event: EventComponent}}}
                     formats={formats}
