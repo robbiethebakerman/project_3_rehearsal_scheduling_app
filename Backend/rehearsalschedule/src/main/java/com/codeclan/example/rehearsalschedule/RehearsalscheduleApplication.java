@@ -1,4 +1,4 @@
-package com.codelcan.example.rehearsalschedule;
+package com.codeclan.example.rehearsalschedule;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
