@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class NewRehearsalContainer extends Component {
+class NewRehearsalFormContainer extends Component {
 
     render() {
         return(
@@ -9,4 +9,4 @@ class NewRehearsalContainer extends Component {
     }
 }
 
-export default NewRehearsalContainer;
+export default NewRehearsalFormContainer;
