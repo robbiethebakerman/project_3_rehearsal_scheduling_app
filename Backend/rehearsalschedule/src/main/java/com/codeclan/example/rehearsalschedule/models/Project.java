@@ -22,7 +22,7 @@ public class Project {
     private List<Member> members;
 
     @OneToMany
-    @JoinColumn(name="rehearsal_id", nullable=false)
+    @JoinColumn(name="rehearsal_id", nullable=true)
     private List <Rehearsal> rehearsals;
 
     @Column(name="start_date")

@@ -18,9 +18,11 @@ public class Member {
     @Column(name="name")
     private String name;
 
+    @Column(name="email")
+    private String email;
 
     @ManyToOne
-    @JoinColumn(name="team_id", nullable=false)
+    @JoinColumn(name="team_id", nullable=true)
     private Team team;
 
 
@@ -42,14 +44,14 @@ public class Member {
 
 
     @ManyToOne
-    @JoinColumn(name = "project_id", nullable = false)
+    @JoinColumn(name = "project_id")
     private Project project;
 
-    public Member(String name, Team team){
+    public Member(String name, String email, Team team){
         this.name = name;
+        this.email = email;
         this.team = team;
         this.tasks = new ArrayList<>();
-        this.project = project;
     }
 
     public Member(){
@@ -71,6 +73,14 @@ public class Member {
         this.name = name;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public Team getTeam() {
         return team;
     }
@@ -85,14 +95,6 @@ public class Member {
 
     public void setTasks(List<Task> tasks) {
         this.tasks = tasks;
-    }
-
-    public Project getProject() {
-        return project;
-    }
-
-    public void setProject(Project project) {
-        this.project = project;
     }
 
     public void addTask(Task task) {
