@@ -4,6 +4,7 @@ import com.codeclan.example.rehearsalschedule.RehearsalscheduleApplication;
 import com.codeclan.example.rehearsalschedule.models.Member;
 import com.codeclan.example.rehearsalschedule.models.Project;
 import com.codeclan.example.rehearsalschedule.models.Rehearsal;
+import com.codeclan.example.rehearsalschedule.models.Team;
 import org.springframework.data.rest.core.config.Projection;
 
 import java.util.Date;
@@ -15,7 +16,7 @@ public interface EmbedForProject {
 
     String getName();
 
-    List<Member> getMembers();
+    List<Team> getTeams();
 
     List<Rehearsal> getRehearsals();
 

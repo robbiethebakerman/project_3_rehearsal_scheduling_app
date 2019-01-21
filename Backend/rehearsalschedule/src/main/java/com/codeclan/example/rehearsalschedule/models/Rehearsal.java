@@ -26,16 +26,29 @@ public class Rehearsal {
     @OneToMany(mappedBy = "rehearsal")
     private List<Task> tasks;
 
-    public Rehearsal(Date startTime, Date endTime){
+    @ManyToOne
+    @JoinColumn(name="project_id", nullable=false)
+    private Project project;
+
+    public Rehearsal(Date startTime, Date endTime, Project project){
         this.startTime = startTime;
         this.endTime = endTime;
         this.tasks = new ArrayList<>();
+        this.project = project;
     }
 
     public Rehearsal(){}
 
     public Long getId() {
         return id;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
     }
 
     public void setId(Long id) {

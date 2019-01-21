@@ -15,7 +15,6 @@ public interface EmbedForMembers {
     String getName();
     Team getTeam();
     List<Task> getTasks();
-    Project getProject();
     String getEmail();
 
 }

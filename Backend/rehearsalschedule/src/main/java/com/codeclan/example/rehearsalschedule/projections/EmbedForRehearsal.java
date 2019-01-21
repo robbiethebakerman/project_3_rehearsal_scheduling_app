@@ -1,5 +1,6 @@
 package com.codeclan.example.rehearsalschedule.projections;
 
+import com.codeclan.example.rehearsalschedule.models.Project;
 import com.codeclan.example.rehearsalschedule.models.Rehearsal;
 import com.codeclan.example.rehearsalschedule.models.Task;
 import org.springframework.data.rest.core.config.Projection;
@@ -12,4 +13,5 @@ public interface EmbedForRehearsal {
     Date getStartTime();
     Date getEndTime();
     List<Task> getTasks();
+    Project getProject();
 }

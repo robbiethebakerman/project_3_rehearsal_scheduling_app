@@ -18,12 +18,25 @@ public class Team {
     @OneToMany(mappedBy = "team")
     private List<Member> members;
 
-    public Team(String name){
+    @ManyToOne
+    @JoinColumn(name="project_id", nullable=false)
+    private Project project;
+
+    public Team(String name, Project project){
         this.name = name;
         this.members = new ArrayList<>();
+        this.project = project;
     }
 
     public Team(){}
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
 
     public Long getId() {
         return id;

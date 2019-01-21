@@ -55,40 +55,40 @@ public class DataLoader implements ApplicationRunner {
         Project project = new Project("Christmas Panto", date13, date14);
         projectRepository.save(project);
 
-        Team team1 = new Team("Band");
+        Team team1 = new Team("Band", project);
         teamRepository.save(team1);
 
-        Team team2 = new Team("Cast");
+        Team team2 = new Team("Cast", project);
         teamRepository.save(team2);
 
-        Team team3 = new Team("Lighting");
+        Team team3 = new Team("Lighting", project);
         teamRepository.save(team3);
 
-        Member member1 = new Member("Mandy", "mandy@gmail.com", team1, project);
+        Member member1 = new Member("Mandy", "mandy@gmail.com", team1);
         memberRepository.save(member1);
 
-        Member member2 = new Member("Steven", "steven@gmail.com", team2, project);
+        Member member2 = new Member("Steven", "steven@gmail.com", team2);
         memberRepository.save(member2);
 
-        Member member3 = new Member("Michael", "micheal@gmail.com", team3, project);
+        Member member3 = new Member("Michael", "micheal@gmail.com", team3);
         memberRepository.save(member3);
 
-        Member member4 = new Member("Robbie", "robbie@gmail.com", team1, project);
+        Member member4 = new Member("Robbie", "robbie@gmail.com", team1);
         memberRepository.save(member4);
 
-        Member member5 = new Member("Alex", "alex@gmail.com", team2, project);
+        Member member5 = new Member("Alex", "alex@gmail.com", team2);
         memberRepository.save(member5);
 
-        Rehearsal rehearsal1 = new Rehearsal(date1, date2);
+        Rehearsal rehearsal1 = new Rehearsal(date1, date2, project);
         rehearsalRepository.save(rehearsal1);
 
-        Rehearsal rehearsal2 = new Rehearsal(date3, date4);
+        Rehearsal rehearsal2 = new Rehearsal(date3, date4, project);
         rehearsalRepository.save(rehearsal2);
 
-        Rehearsal rehearsal3 = new Rehearsal(date5, date6);
+        Rehearsal rehearsal3 = new Rehearsal(date5, date6, project);
         rehearsalRepository.save(rehearsal3);
 
-        Rehearsal rehearsal4 = new Rehearsal(date7, date8);
+        Rehearsal rehearsal4 = new Rehearsal(date7, date8, project);
         rehearsalRepository.save(rehearsal4);
 
         Task task1 = new Task(date9, date10, "Tuning Session", rehearsal1);

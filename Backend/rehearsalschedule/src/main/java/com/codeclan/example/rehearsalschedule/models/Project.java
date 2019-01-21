@@ -19,10 +19,10 @@ public class Project {
     private String name;
 
     @OneToMany(mappedBy = "project")
-    private List<Member> members;
+    private List<Team> teams;
 
-    @OneToMany
-    @JoinColumn(name="rehearsal_id", nullable=true)
+    @OneToMany(mappedBy = "project")
+//    @JoinColumn(name="rehearsal_id", nullable=true)
     private List <Rehearsal> rehearsals;
 
     @Column(name="start_date")
@@ -33,7 +33,7 @@ public class Project {
 
     public Project(String name, Date startDate, Date endDate){
         this.name = name;
-        this.members = new ArrayList<>();
+        this.teams = new ArrayList<>();
         this.rehearsals = new ArrayList<>();
         this.startDate = startDate;
         this.endDate = endDate;
@@ -59,12 +59,12 @@ public class Project {
         this.name = name;
     }
 
-    public List<Member> getMembers() {
-        return members;
+    public List<Team> getTeams() {
+        return teams;
     }
 
-    public void setMembers(List<Member> members) {
-        this.members = members;
+    public void setTeams(List<Team> teams) {
+        this.teams = teams;
     }
 
     public List<Rehearsal> getRehearsals() {
