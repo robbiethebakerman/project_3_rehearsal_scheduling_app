@@ -31,19 +31,20 @@ public class Task {
     @JoinTable(
             name="members_tasks",
             joinColumns = {@JoinColumn(
-                    name="member_id",
+                    name="task_id",
                     nullable = false,
                     updatable = false
             )},
             inverseJoinColumns = {@JoinColumn(
-                    name="task_id",
+                    name="member_id",
                     nullable = false,
                     updatable = false)}
 
     )
-    private List<models.Member> members;
+    private List<Member> members;
 
-    @Column
+    @ManyToOne
+    @JoinColumn(name ="rehearsal_id", nullable = false)
     private Rehearsal rehearsal;
 
     public Task(Date startTime, Date endTime, String name) {
@@ -55,6 +56,14 @@ public class Task {
     }
 
     public Task(){}
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Date getStartTime() {
         return startTime;
@@ -80,11 +89,11 @@ public class Task {
         this.name = name;
     }
 
-    public List<models.Member> getMembers() {
+    public List<Member> getMembers() {
         return members;
     }
 
-    public void setMembers(List<models.Member> members) {
+    public void setMembers(List<Member> members) {
         this.members = members;
     }
 
@@ -96,7 +105,7 @@ public class Task {
         this.rehearsal = rehearsal;
     }
 
-    public void addMembers(models.Member member){
+    public void addMembers(Member member){
         this.members.add(member);
     }
 

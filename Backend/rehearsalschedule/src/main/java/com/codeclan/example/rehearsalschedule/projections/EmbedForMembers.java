@@ -1,9 +1,9 @@
-package projections;
+package com.codeclan.example.rehearsalschedule.projections;
 
 
+import com.codeclan.example.rehearsalschedule.models.Member;
 import com.codeclan.example.rehearsalschedule.models.Task;
-import models.Member;
-import models.Team;
+import com.codeclan.example.rehearsalschedule.models.Team;
 import org.springframework.data.rest.core.config.Projection;
 
 import java.util.List;

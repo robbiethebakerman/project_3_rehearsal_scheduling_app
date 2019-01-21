@@ -1,4 +1,4 @@
-package models;
+package com.codeclan.example.rehearsalschedule.models;
 
 import com.codeclan.example.rehearsalschedule.models.Rehearsal;
 
@@ -11,21 +11,27 @@ import java.util.List;
 @Table(name="projects")
 public class Project {
 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name="name")
     private String name;
+
     @OneToMany(mappedBy = "project")
-    private List<models.Member> members;
-    @Column(name="rehearsals")
+    private List<Member> members;
+
+    @OneToMany
+    @JoinColumn(name="rehearsal_id", nullable=false)
     private List <Rehearsal> rehearsals;
+
     @Column(name="start_date")
     private Date startDate;
+
     @Column(name="end_date")
     private Date endDate;
 
     public Project(String name, Date startDate, Date endDate){
-        this.id = id;
         this.name = name;
         this.members = new ArrayList<>();
         this.rehearsals = new ArrayList<>();
@@ -53,11 +59,11 @@ public class Project {
         this.name = name;
     }
 
-    public List<models.Member> getMembers() {
+    public List<Member> getMembers() {
         return members;
     }
 
-    public void setMembers(List<models.Member> members) {
+    public void setMembers(List<Member> members) {
         this.members = members;
     }
 

@@ -1,4 +1,4 @@
-package models;
+package com.codeclan.example.rehearsalschedule.models;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -8,15 +8,17 @@ import java.util.List;
 @Table(name="teams")
 public class Team {
 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(name="name")
     private String name;
+
     @OneToMany(mappedBy = "team")
-    private List<models.Member> members;
+    private List<Member> members;
 
     public Team(String name){
-        this.id = id;
         this.name = name;
         this.members = new ArrayList<>();
     }
@@ -41,11 +43,11 @@ public class Team {
         this.name = name;
     }
 
-    public List<models.Member> getMembers() {
+    public List<Member> getMembers() {
         return members;
     }
 
-    public void setMembers(List<models.Member> members) {
+    public void setMembers(List<Member> members) {
         this.members = members;
     }
 }
