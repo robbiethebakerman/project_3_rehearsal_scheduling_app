@@ -23,9 +23,7 @@ public class Team {
         this.members = new ArrayList<>();
     }
 
-    public Team(){
-
-    }
+    public Team(){}
 
     public Long getId() {
         return id;

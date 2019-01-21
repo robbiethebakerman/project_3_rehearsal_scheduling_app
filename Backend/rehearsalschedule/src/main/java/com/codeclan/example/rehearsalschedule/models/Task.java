@@ -1,9 +1,7 @@
 package com.codeclan.example.rehearsalschedule.models;
 
-import com.codeclan.example.rehearsalschedule.RehearsalscheduleApplication;
-import org.hibernate.annotations.Cascade;
-import sun.swing.BakedArrayList;
 
+import org.hibernate.annotations.Cascade;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -44,10 +42,10 @@ public class Task {
     private List<Member> members;
 
     @ManyToOne
-    @JoinColumn(name ="rehearsal_id", nullable=true)
+    @JoinColumn(name ="rehearsal_id", nullable=false)
     private Rehearsal rehearsal;
 
-    public Task(Date startTime, Date endTime, String name) {
+    public Task(Date startTime, Date endTime, String name, Rehearsal rehearsal) {
         this.startTime = startTime;
         this.endTime = endTime;
         this.name = name;

@@ -52,6 +52,8 @@ public class DataLoader implements ApplicationRunner {
         Date date13 = new Date(2019, 1, 1, 11, 00);
         Date date14 = new Date(2019, 1, 28, 17, 30);
 
+        Project project = new Project("Christmas Panto", date13, date14);
+        projectRepository.save(project);
 
         Team team1 = new Team("Band");
         teamRepository.save(team1);
@@ -62,43 +64,42 @@ public class DataLoader implements ApplicationRunner {
         Team team3 = new Team("Lighting");
         teamRepository.save(team3);
 
+        Member member1 = new Member("Mandy", "mandy@gmail.com", team1, project);
+        memberRepository.save(member1);
+
+        Member member2 = new Member("Steven", "steven@gmail.com", team2, project);
+        memberRepository.save(member2);
+
+        Member member3 = new Member("Michael", "micheal@gmail.com", team3, project);
+        memberRepository.save(member3);
+
+        Member member4 = new Member("Robbie", "robbie@gmail.com", team1, project);
+        memberRepository.save(member4);
+
+        Member member5 = new Member("Alex", "alex@gmail.com", team2, project);
+        memberRepository.save(member5);
 
         Rehearsal rehearsal1 = new Rehearsal(date1, date2);
         rehearsalRepository.save(rehearsal1);
 
         Rehearsal rehearsal2 = new Rehearsal(date3, date4);
         rehearsalRepository.save(rehearsal2);
-//
+
         Rehearsal rehearsal3 = new Rehearsal(date5, date6);
         rehearsalRepository.save(rehearsal3);
 
         Rehearsal rehearsal4 = new Rehearsal(date7, date8);
         rehearsalRepository.save(rehearsal4);
 
-        Task task1 = new Task(date9, date10, "Tuning Session");
+        Task task1 = new Task(date9, date10, "Tuning Session", rehearsal1);
         taskRepository.save(task1);
 
-        Task task2 = new Task(date11, date12, "All Hands Meeting");
+        Task task2 = new Task(date11, date12, "All Hands Meeting", rehearsal2);
         taskRepository.save(task2);
 
-        Member member1 = new Member("Mandy", "mandy@gmail.com",team1);
-        memberRepository.save(member1);
-
-       Member member2 = new Member("Steven", "steven@gmail.com", team2);
-        memberRepository.save(member2);
-
-        Member member3 = new Member("Michael", "micheal@gmail.com", team3);
-        memberRepository.save(member3);
-
-        Member member4 = new Member("Robbie", "robbie@gmail.com", team1);
-        memberRepository.save(member4);
-
-        Member member5 = new Member("Alex", "alex@gmail.com", team2);
-        memberRepository.save(member5);
-
-        Project project = new Project("Christmas Panto", date13, date14);
-        projectRepository.save(project);
 
     }
+
+
 
 }

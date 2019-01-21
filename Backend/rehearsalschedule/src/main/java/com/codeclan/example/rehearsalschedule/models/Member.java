@@ -22,7 +22,7 @@ public class Member {
     private String email;
 
     @ManyToOne
-    @JoinColumn(name="team_id", nullable=true)
+    @JoinColumn(name="team_id", nullable=false)
     private Team team;
 
 
@@ -47,16 +47,24 @@ public class Member {
     @JoinColumn(name = "project_id")
     private Project project;
 
-    public Member(String name, String email, Team team){
+    public Member(String name, String email, Team team, Project project){
         this.name = name;
         this.email = email;
         this.team = team;
         this.tasks = new ArrayList<>();
+        this.project = project;
     }
 
-    public Member(){
+    public Member(){}
 
+    public Project getProject() {
+        return project;
     }
+
+    public void setProject(Project project) {
+        this.project = project;
+    }
+
     public Long getId() {
         return id;
     }

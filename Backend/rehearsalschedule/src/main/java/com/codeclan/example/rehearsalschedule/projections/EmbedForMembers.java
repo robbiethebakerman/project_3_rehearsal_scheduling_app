@@ -2,6 +2,7 @@ package com.codeclan.example.rehearsalschedule.projections;
 
 
 import com.codeclan.example.rehearsalschedule.models.Member;
+import com.codeclan.example.rehearsalschedule.models.Project;
 import com.codeclan.example.rehearsalschedule.models.Task;
 import com.codeclan.example.rehearsalschedule.models.Team;
 import org.springframework.data.rest.core.config.Projection;
@@ -14,5 +15,7 @@ public interface EmbedForMembers {
     String getName();
     Team getTeam();
     List<Task> getTasks();
+    Project getProject();
+    String getEmail();
 
 }
