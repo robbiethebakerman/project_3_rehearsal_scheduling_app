@@ -1,4 +1,4 @@
-package com.codelcan.example.rehearsalschedule;
+package com.codeclan.example.rehearsalschedule;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
