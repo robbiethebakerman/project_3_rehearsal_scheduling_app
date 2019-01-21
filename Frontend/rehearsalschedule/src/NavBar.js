@@ -16,8 +16,36 @@ const NavBar = (props) => {
                 <li className="nav-bar-item">
                     <Link
                         className="nav-bar-link"
+                        to="/create-project">
+                        Create Project
+                    </Link>
+                </li>
+                <li className="nav-bar-item">
+                    <Link
+                        className="nav-bar-link"
+                        to="/create-team">
+                        Create Team
+                    </Link>
+                </li>
+                <li className="nav-bar-item">
+                    <Link
+                        className="nav-bar-link"
+                        to="/create-member">
+                            Create Member
+                    </Link>
+                </li>
+                <li className="nav-bar-item">
+                    <Link
+                        className="nav-bar-link"
                         to="/create-rehearsal">
-                            Create Rehearsal
+                        Create Rehearsal
+                    </Link>
+                </li>
+                <li className="nav-bar-item">
+                    <Link
+                        className="nav-bar-link"
+                        to="/create-task">
+                        Create Task
                     </Link>
                 </li>
             </ul>

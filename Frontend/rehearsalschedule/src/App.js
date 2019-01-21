@@ -3,7 +3,11 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './css/App.css';
 import CalendarContainer from './containers/calendarContainers/CalendarContainer';
 import SingleGanntContainer from "./containers/ganttContainers/SingleGanntContainer";
-import NewRehearsalContainer from "./containers/formContainers/NewRehearsalContainer";
+import NewMemberFormContainer from './containers/formContainers/NewMemberFormContainer';
+import NewProjectFormContainer from './containers/formContainers/NewProjectFormContainer';
+import NewRehearsalFormContainer from "./containers/formContainers/NewRehearsalFormContainer";
+import NewTaskFormContainer from './containers/formContainers/NewTaskFormContainer';
+import NewTeamFormContainer from './containers/formContainers/NewTeamFormContainer';
 import NavBar from './NavBar.js';
 
 class App extends Component {
@@ -25,7 +29,11 @@ class App extends Component {
                       }}/>*/}
                     <Route exact path="/calendar" component={CalendarContainer}/>
                     <Route exact path="/gantt" component={SingleGanntContainer}/>
-                    <Route exact path="/create-rehearsal" component={NewRehearsalContainer}/>
+                    <Route exact path="/create-member" component={NewMemberFormContainer}/>
+                    <Route exact path="/create-project" component={NewProjectFormContainer}/>
+                    <Route exact path="/create-rehearsal" component={NewRehearsalFormContainer}/>
+                    <Route exact path="/create-task" component={NewTaskFormContainer}/>
+                    <Route exact path="/create-team" component={NewTeamFormContainer}/>
                 </Switch>
             </Fragment>
         </Router>
