@@ -1,11 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
-import CalendarContainer from './containers/calendar/CalendarContainer';
+import CalendarContainer from './containers/calendarContainers/CalendarContainer';
+import SingleGanntContainer from "./containers/ganttContainers/SingleGanntContainer";
 
 class App extends Component {
   render() {
     return (
+        <Fragment>
       <div className="App">
         <Router>
             <Fragment>
@@ -19,10 +21,12 @@ class App extends Component {
                             return <SinglePirateContainer id={id}/>
                       }}/>*/}
                     <Route exact path="/calendar" component={CalendarContainer}/>
+                    <Route exact path="/gantt" component={SingleGanntContainer}/>
                 </Switch>
             </Fragment>
         </Router>
       </div>
+        </Fragment>
     );
   }
 }
