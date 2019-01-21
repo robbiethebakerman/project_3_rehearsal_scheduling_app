@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb5d1b6-c069-4262-b092-488a33e2ed8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/formComponents/NewMemberForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/formComponents/NewProjectForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/formComponents/NewRehearsalForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/formComponents/NewTaskForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/formComponents/NewTeamForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/formContainers/NewMemberFormContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/formContainers/NewProjectFormContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/formContainers/NewTaskFormContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/formContainers/NewTeamFormContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/formContainers/NewRehearsalContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/formContainers/NewRehearsalFormContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/Request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Request.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="805">
-              <caret line="35" column="84" selection-start-line="35" selection-start-column="84" selection-end-line="35" selection-end-column="84" />
+            <state relative-caret-position="314">
+              <caret line="32" column="78" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -40,13 +31,44 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/NavBar.js">
+        <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+            <state relative-caret-position="363">
+              <caret line="98" column="41" lean-forward="true" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#379#421#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/helpers/Request.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="41" column="39" lean-forward="true" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/rehearsalsDummyData.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -113,7 +135,6 @@
         <option value="$PROJECT_DIR$/src/containers/components/calendarComponents/EventComponent.js" />
         <option value="$PROJECT_DIR$/src/containers/calendarContainers/rehearsalsDummyData.js" />
         <option value="$PROJECT_DIR$/src/components/calendarComponents/EventComponent.js" />
-        <option value="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" />
         <option value="$PROJECT_DIR$/src/css/react-big-calendar.css" />
         <option value="$PROJECT_DIR$/src/components/ganttComponents/SingleGanttComponent.js" />
         <option value="$PROJECT_DIR$/src/components/ganttComponents/MemberListBoxComponent.js" />
@@ -136,6 +157,9 @@
         <option value="$PROJECT_DIR$/src/containers/formContainers/NewTaskFormContainer.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/NavBar.js" />
+        <option value="$PROJECT_DIR$/src/helpers/Request.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" />
       </list>
     </option>
   </component>
@@ -180,14 +204,7 @@
               <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="formComponents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ganttComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="calendarComponents" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
@@ -201,13 +218,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="calendarContainers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="formContainers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
@@ -265,13 +275,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32355000" />
+    <option name="totallyTimeSpent" value="35580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28047922" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22621565" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -283,9 +293,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32923833" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5003524" side_tool="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49964765" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.6575053" weight="0.32923833" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.34249473" side_tool="true" weight="0.32923833" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49964765" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -331,13 +341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css" />
     <entry file="file://$PROJECT_DIR$/node_modules/react-big-calendar/lib/EventCell.js" />
     <entry file="file://$PROJECT_DIR$/src/css/calendar.css">
@@ -360,17 +363,6 @@
     <entry file="file://$PROJECT_DIR$/node_modules/react-big-calendar/dist/react-big-calendar.min.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/react-big-calendar/lib/addons/dragAndDrop/styles.css" />
     <entry file="file://$PROJECT_DIR$/node_modules/react-big-calendar/lib/css/react-big-calendar.css" />
-    <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#379#421#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/react-big-calendar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -382,13 +374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/rehearsalsDummyData.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -465,8 +450,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="35" column="84" selection-start-line="35" selection-start-column="84" selection-end-line="35" selection-end-column="84" />
+        <state relative-caret-position="314">
+          <caret line="32" column="78" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
@@ -479,6 +464,44 @@
           <caret line="55" column="22" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/rehearsalsDummyData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/Request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="41" column="39" lean-forward="true" selection-start-line="41" selection-start-column="39" selection-end-line="41" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="98" column="41" lean-forward="true" selection-start-line="98" selection-start-column="41" selection-end-line="98" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#379#421#0" expanded="true" />
           </folding>
         </state>
       </provider>

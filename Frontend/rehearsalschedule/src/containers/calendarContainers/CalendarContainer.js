@@ -26,6 +26,14 @@ class CalendarContainer extends Component {
         };
         this.handleSelectRehearsalNewPage = this.handleSelectRehearsalNewPage.bind(this);
         this.handleSelectRehearsalShowElement = this.handleSelectRehearsalShowElement.bind(this);
+        this.getAllRehearsals = this.getAllRehearsals.bind(this);
+    }
+
+    getAllRehearsals() {
+        let request = new Request();
+        request.get('/api/rehearsals').then((data) => {
+                this.setState({rehearsals: data._embedded.rehearsals});
+            })
     }
 
     addTimeRangeStringToRehearsalObjects() {
@@ -38,6 +46,7 @@ class CalendarContainer extends Component {
 
     componentDidMount() {
         this.addTimeRangeStringToRehearsalObjects();
+        this.getAllRehearsals();
     }
 
     // To be used with React Big Calendars built-in onSelectEvent prop (or onDoubleClickEvent)
@@ -86,10 +95,10 @@ class CalendarContainer extends Component {
                     className="big-calendar"
                     localizer={localizer}
                     events={this.state.rehearsals}
-                    startAccessor="start"
-                    endAccessor="end"
-                    titleAccessor="location"
-                    tooltipAccessor="location"
+                    startAccessor="startTime"
+                    endAccessor="endTime"
+                    titleAccessor="startTime"
+                    tooltipAccessor="startTime"
                     scrollToTime={scrollStartTime}
                     onSelectEvent={this.handleSelectRehearsalNewPage}
                     // Below prop uses custom event in EventComponent.js for the month view, switched off for now
