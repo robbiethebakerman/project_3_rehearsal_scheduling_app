@@ -13,13 +13,13 @@ public class Team {
     @Column(name="name")
     private String name;
     @OneToMany(mappedBy = "team")
-    private List<Member> members;
+    private List<models.Member> members;
 
-    public Team(String name{
+    public Team(String name){
         this.id = id;
         this.name = name;
         this.members = new ArrayList<>();
-    })
+    }
 
     public Team(){
 
@@ -41,11 +41,11 @@ public class Team {
         this.name = name;
     }
 
-    public List<Member> getMembers() {
+    public List<models.Member> getMembers() {
         return members;
     }
 
-    public void setMembers(List<Member> members) {
+    public void setMembers(List<models.Member> members) {
         this.members = members;
     }
 }

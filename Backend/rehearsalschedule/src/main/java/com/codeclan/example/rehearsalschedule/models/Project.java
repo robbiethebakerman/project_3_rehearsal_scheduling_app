@@ -1,5 +1,7 @@
 package models;
 
+import com.codeclan.example.rehearsalschedule.models.Rehearsal;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,7 +16,7 @@ public class Project {
     @Column(name="name")
     private String name;
     @OneToMany(mappedBy = "project")
-    private List<Member> members;
+    private List<models.Member> members;
     @Column(name="rehearsals")
     private List <Rehearsal> rehearsals;
     @Column(name="start_date")
@@ -51,11 +53,11 @@ public class Project {
         this.name = name;
     }
 
-    public List<Member> getMembers() {
+    public List<models.Member> getMembers() {
         return members;
     }
 
-    public void setMembers(List<Member> members) {
+    public void setMembers(List<models.Member> members) {
         this.members = members;
     }
 

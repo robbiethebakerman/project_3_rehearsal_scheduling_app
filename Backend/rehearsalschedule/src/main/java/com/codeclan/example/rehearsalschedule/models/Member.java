@@ -15,15 +15,15 @@ public class Member {
     @Column(name="name")
     private String name;
     @Column(name="team")
-    private Team team;
+    private models.Team team;
     @ManyToOne
     @JoinColumn(name = "team_id", nullable = false)
     private List<Task> tasks;
     @ManyToOne
     @JoinColumn(name = "project_id", nullable = false)
-    private List<Project> projects;
+    private List<models.Project> projects;
 
-    public Member(String name, Team team){
+    public Member(String name, models.Team team){
         this.id = id;
         this.name = name;
         this.team = team;
@@ -50,11 +50,11 @@ public class Member {
         this.name = name;
     }
 
-    public Team getTeam() {
+    public models.Team getTeam() {
         return team;
     }
 
-    public void setTeam(Team team) {
+    public void setTeam(models.Team team) {
         this.team = team;
     }
 

@@ -41,7 +41,7 @@ public class Task {
                     updatable = false)}
 
     )
-    private List<Member> members;
+    private List<models.Member> members;
 
     @Column
     private Rehearsal rehearsal;
@@ -80,11 +80,11 @@ public class Task {
         this.name = name;
     }
 
-    public List<Member> getMembers() {
+    public List<models.Member> getMembers() {
         return members;
     }
 
-    public void setMembers(List<Member> members) {
+    public void setMembers(List<models.Member> members) {
         this.members = members;
     }
 
@@ -96,7 +96,7 @@ public class Task {
         this.rehearsal = rehearsal;
     }
 
-    public void addMembers(Member member){
+    public void addMembers(models.Member member){
         this.members.add(member);
     }
 
