@@ -10,7 +10,15 @@ package com.codeclan.example.rehearsalschedule.components;
         import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.boot.ApplicationRunner;
         import org.springframework.stereotype.Component;
+
+        import java.text.DateFormat;
+        import java.text.SimpleDateFormat;
+        import java.time.LocalDate;
+        import java.time.LocalDateTime;
+        import java.time.format.DateTimeFormatter;
         import java.util.Date;
+        import java.util.Locale;
+
         import org.springframework.boot.ApplicationArguments;
 
 
@@ -37,6 +45,21 @@ public class DataLoader implements ApplicationRunner {
 
 
     public void run(ApplicationArguments args){
+// Below may be the the correct way as of Java 8 to create datetimes, as Date seems to be mostly deprecated
+// and may cause issues. Unfortunately the below uses LocalDateTime type rather than Date.
+// It may be necessary to change our date usages to the below way though, if it ends up not recording the
+// date properly from forms
+
+//        String str = "1986-04-08 12:30";
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+//        LocalDateTime dateTime = LocalDateTime.parse(str, formatter);
+
+//        Note that the date can aslo be formatted back into a string as thus:
+
+//        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+//        LocalDateTime dateTime = LocalDateTime.of(1986, Month.APRIL, 8, 12, 30);
+//        String formattedDateTime = dateTime.format(formatter); // "1986-04-08 12:30"
+
         Date date1 = new Date(2019, 1, 15, 12, 00);
         Date date2 = new Date(2019, 1, 15, 13, 00);
         Date date3 = new Date(2019, 1, 17, 11, 00);
