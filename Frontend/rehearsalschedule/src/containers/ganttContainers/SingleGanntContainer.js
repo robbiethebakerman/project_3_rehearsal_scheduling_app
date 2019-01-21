@@ -1,5 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import GanttChartComponent from "../../components/ganttComponents/SingleGanttComponent";
+import MemberListBoxContainer from "./MemberListBoxContainer";
 
 class SingleGanttContainer extends Component {
 
@@ -9,12 +10,13 @@ class SingleGanttContainer extends Component {
             data: [
                 {
 
-                taskID: "TaskOne",
-                taskName: "Music Call",
-                resource: "Hall One",
-                startDate: new Date(2019, 1, 1, 16),
-                endDate: new Date(2019, 1, 1, 17),
-                duration: null,
+                    taskID: "TaskOne",
+                    taskName: "Music Call",
+                    resource: "Hall One",
+                    startDate: new Date(2019, 1, 1, 16),
+                    endDate: new Date(2019, 1, 1, 17),
+                    duration: null,
+                    members: ["John", "Samantha", "Terrence", "Joan"]
 
                 },
                 {
@@ -24,6 +26,7 @@ class SingleGanttContainer extends Component {
                     startDate: new Date(2019, 1, 1, 15, 30),
                     endDate: new Date(2019, 1, 1, 18),
                     duration: null,
+                    members: ["James", "Simon", "Alex", "Steven"]
                 },
                 {
                     taskID: "TaskThree",
@@ -32,6 +35,7 @@ class SingleGanttContainer extends Component {
                     startDate: new Date(2019, 1, 1, 19),
                     endDate: new Date(2019, 1, 1, 19,30),
                     duration: null,
+                    members: ["Susan", "Sam", "Sarah", "Shannon"]
                 }
                 ]
         }
@@ -43,6 +47,7 @@ class SingleGanttContainer extends Component {
             <Fragment>
             <div>
                 <GanttChartComponent chartData={this.state.data}/>
+                <MemberListBoxContainer chartData={this.state.data}/>
             </div>
             </Fragment>
         )
