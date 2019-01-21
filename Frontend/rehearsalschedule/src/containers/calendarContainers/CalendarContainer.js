@@ -10,6 +10,7 @@ import moment from "moment";
 import 'moment/locale/en-gb';
 import rehearsals from './rehearsalsDummyData';
 import EventComponent from '../../components/calendarComponents/EventComponent.js';
+import Request from '../../helpers/Request.js';
 
 // Setting locale to en-GB (i.e., UK)) using moment,
 // then creating a localizer to be assigned to BigCalendar component (for sorting times and dates)
