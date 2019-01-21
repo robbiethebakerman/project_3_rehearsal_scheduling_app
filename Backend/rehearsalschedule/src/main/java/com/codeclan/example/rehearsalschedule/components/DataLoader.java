@@ -81,19 +81,19 @@ public class DataLoader implements ApplicationRunner {
         Task task2 = new Task(date11, date12, "All Hands Meeting");
         taskRepository.save(task2);
 
-        Member member1 = new Member("Mandy", team1);
+        Member member1 = new Member("Mandy", "mandy@gmail.com",team1);
         memberRepository.save(member1);
 
-       Member member2 = new Member("Steven", team2);
+       Member member2 = new Member("Steven", "steven@gmail.com", team2);
         memberRepository.save(member2);
 
-        Member member3 = new Member("Michael", team3);
+        Member member3 = new Member("Michael", "micheal@gmail.com", team3);
         memberRepository.save(member3);
 
-        Member member4 = new Member("Robbie", team1);
+        Member member4 = new Member("Robbie", "robbie@gmail.com", team1);
         memberRepository.save(member4);
 
-        Member member5 = new Member("Alex", team2);
+        Member member5 = new Member("Alex", "alex@gmail.com", team2);
         memberRepository.save(member5);
 
         Project project = new Project("Christmas Panto", date13, date14);
