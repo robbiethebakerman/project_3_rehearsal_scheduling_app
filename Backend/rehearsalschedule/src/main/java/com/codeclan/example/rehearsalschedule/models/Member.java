@@ -20,7 +20,7 @@ public class Member {
 
 
     @ManyToOne
-    @JoinColumn(name="team_id", nullable=false)
+    @JoinColumn(name="team_id", nullable=true)
     private Team team;
 
 
@@ -42,14 +42,13 @@ public class Member {
 
 
     @ManyToOne
-    @JoinColumn(name = "project_id", nullable = false)
+    @JoinColumn(name = "project_id")
     private Project project;
 
     public Member(String name, Team team){
         this.name = name;
         this.team = team;
         this.tasks = new ArrayList<>();
-        this.project = project;
     }
 
     public Member(){
@@ -85,14 +84,6 @@ public class Member {
 
     public void setTasks(List<Task> tasks) {
         this.tasks = tasks;
-    }
-
-    public Project getProject() {
-        return project;
-    }
-
-    public void setProject(Project project) {
-        this.project = project;
     }
 
     public void addTask(Task task) {
