@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import GanttChartComponent from "../../components/ganttComponents/SingleGanttComponent";
-import MemberListBoxContainer from "../../components/ganttComponents/MemberListBoxContainer";
+import MemberListBoxContainer from "./MemberListBoxContainer";
 
 class SingleGanttContainer extends Component {
 

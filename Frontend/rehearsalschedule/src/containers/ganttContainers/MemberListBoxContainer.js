@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import MemberListComponent from "../../components/ganttComponents/MemberListComponent";
 
 class MemberListBoxContainer extends Component {
 
@@ -32,7 +33,7 @@ class MemberListBoxContainer extends Component {
     render() {
         return (
             <div>
-                {this.state.data.join(", ")}
+                <MemberListComponent members={this.state.data}/>
             </div>
         );
     }
