@@ -10,7 +10,7 @@ const GanttChartComponent = (props) => {
 
         return (
             <Fragment>
-            <div>
+            <div className={"gantt-chart"}>
                 <Chart
 
                     width={'100%'}
