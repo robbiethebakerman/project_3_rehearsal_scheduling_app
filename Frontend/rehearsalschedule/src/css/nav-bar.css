@@ -1,0 +1,27 @@
+.nav-bar {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+    margin: 0;
+    border-bottom: 1px solid black;
+}
+
+.nav-bar-item {
+    list-style-type: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-bar-link {
+    text-decoration: none;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: black;
+}
+
+.nav-bar-link:hover {
+    background-color: rgba(152, 228, 232, 0.89);
+}

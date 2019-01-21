@@ -81,7 +81,7 @@ class CalendarContainer extends Component {
 
         return(
             <div className="calendar-container">
-                <h1>Calendar Container</h1>
+                <h1>Rehearsal Schedule</h1>
                 <BigCalendar
                     className="big-calendar"
                     localizer={localizer}
