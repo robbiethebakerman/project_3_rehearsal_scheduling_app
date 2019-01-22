@@ -31,7 +31,7 @@ class NewMemberFormContainer extends Component {
 
   render() {
     return(
-      <NewMemberForm teams={this.state.teams} handMemberPost={this.handleMemberPost}/>
+      <NewMemberForm teams={this.state.teams} handleMemberPost={this.handleMemberPost}/>
     )
   }
 

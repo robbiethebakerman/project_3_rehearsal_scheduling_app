@@ -19,7 +19,6 @@ const NewTeamForm = (props) =>{
     <div>
     <form onSubmit={handleSubmit}>
     <input type="text" placeholder="Name" name="name" />
-    <input type="text" placeholder="eMail" name="email" />
     <select name="project">
     {options}
     </select>
