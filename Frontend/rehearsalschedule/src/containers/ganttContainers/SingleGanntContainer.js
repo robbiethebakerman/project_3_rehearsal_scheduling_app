@@ -42,6 +42,7 @@ class SingleGanttContainer extends Component {
         }
     }
 
+
     componentDidMount() {
 
         let request = new Request();

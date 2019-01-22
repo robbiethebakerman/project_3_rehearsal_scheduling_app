@@ -55,8 +55,8 @@ class CalendarContainer extends Component {
     // assign it to e.g., this.state.rehearsalDetail, element can be placed in render function below as a variable
     // defaulting to null
     handleSelectRehearsalNewPage(rehearsal) {
-        // window.location = `/${rehearsal.id}`;
-        window.location = "/gantt";
+        window.location = `/calendar/${rehearsal.id}`;
+        // window.location = "/gantt";
     }
 
     handleSelectRehearsalShowElement(rehearsal) {
@@ -97,8 +97,8 @@ class CalendarContainer extends Component {
                     events={this.state.rehearsals}
                     startAccessor="startTime"
                     endAccessor="endTime"
-                    titleAccessor="startTime"
-                    tooltipAccessor="startTime"
+                    titleAccessor="name"
+                    tooltipAccessor="name"
                     scrollToTime={scrollStartTime}
                     onSelectEvent={this.handleSelectRehearsalNewPage}
                     // Below prop uses custom event in EventComponent.js for the month view, switched off for now

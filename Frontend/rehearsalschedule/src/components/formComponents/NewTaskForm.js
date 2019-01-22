@@ -10,9 +10,9 @@ const NewTaskForm = (props) =>{
     event.preventDefault();
     const task = {
       "name": event.target.name.value,
-      "startTime": event.target.name.value,
-      "endTime": event.target.name.value,
-      "rehearsal": event.target.name.value
+      "startTime": event.target.startTime.value,
+      "endTime": event.target.endTime.value,
+      "rehearsal": event.target.rehearsal.value
     }
     props.handleTaskPost(task);
   }
