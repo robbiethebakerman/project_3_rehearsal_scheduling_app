@@ -15,6 +15,7 @@ const NewProjectForm = (props) =>{
 
   return(
     <div>
+    <p>Create a Project</p>
     <form onSubmit={handleSubmit}>
     <input type="text" placeholder="Name" name="name" />
     <label for="startDate">Choose start date:</label>
