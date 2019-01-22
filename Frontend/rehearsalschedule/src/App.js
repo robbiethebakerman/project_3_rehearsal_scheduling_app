@@ -8,6 +8,7 @@ import NewProjectFormContainer from './containers/formContainers/NewProjectFormC
 import NewRehearsalFormContainer from "./containers/formContainers/NewRehearsalFormContainer";
 import NewTaskFormContainer from './containers/formContainers/NewTaskFormContainer';
 import NewTeamFormContainer from './containers/formContainers/NewTeamFormContainer';
+import ProjectContainer from './containers/ProjectContainer/ProjectContainer.js';
 import NavBar from './NavBar.js';
 
 class App extends Component {
@@ -33,7 +34,7 @@ class App extends Component {
                         const id = props.match.params.id;
                         return <SingleGanntContainer id={id}/>;}
                     } />
-
+                    <Route exact path="/" component={ProjectContainer}/>
                     <Route exact path="/create-member" component={NewMemberFormContainer}/>
                     <Route exact path="/create-project" component={NewProjectFormContainer}/>
                     <Route exact path="/create-rehearsal" component={NewRehearsalFormContainer}/>
