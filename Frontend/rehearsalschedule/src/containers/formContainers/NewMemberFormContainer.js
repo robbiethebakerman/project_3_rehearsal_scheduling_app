@@ -24,14 +24,14 @@ class NewMemberFormContainer extends Component {
   handleMemberPost(member){
     let request = new Request();
     request.post('/api/members', member).then(() =>{
-      window.location= '/members'
+      window.location= '/create-rehearsal'
     });
   }
 
 
   render() {
     return(
-      <NewMemberForm teams={this.state.teams} handMemberPost={this.handleMemberPost}/>
+      <NewMemberForm teams={this.state.teams} handleMemberPost={this.handleMemberPost}/>
     )
   }
 

@@ -22,7 +22,7 @@ class NewRehearsalFormContainer extends Component{
   handleRehearsalPost(rehearsal){
     let request = new Request();
     request.post('/api/rehearsals', rehearsal).then(() =>{
-      window.location= '/rehearsals'
+      window.location= '/create-task'
     });
   }
 
