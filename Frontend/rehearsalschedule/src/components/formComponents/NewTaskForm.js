@@ -3,7 +3,7 @@ import React from 'react';
 const NewTaskForm = (props) =>{
 
   const options = props.rehearsals.map((rehearsal, index) =>{
-    return <option key={rehearsal.id}>{rehearsal.startTime}</option>
+    return <option key={rehearsal.id}>{rehearsal.name}</option>
   })
 
   function handleSubmit(event){
@@ -21,8 +21,10 @@ const NewTaskForm = (props) =>{
   return(
     <div>
     <form onSubmit={handleSubmit}>
-    <input type="text" placeholder="starttime" name="startTime" />
-    <input type="text" placeholder="endtime" name="endTime" />
+    <label for="startTime">Enter start time:</label>
+    <input type="datetime-local" id="startTime" name="startTime" />
+    <label for="endTime">Enter end time:</label>
+    <input type="datetime-local" id="endTime" name="endTime" />
     <input type="text" placeholder="name" name="name" />
     <select name="rehearsal">
     {options}
