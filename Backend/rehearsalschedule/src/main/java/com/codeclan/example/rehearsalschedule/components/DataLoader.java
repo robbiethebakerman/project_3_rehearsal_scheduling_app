@@ -93,7 +93,7 @@ public class DataLoader implements ApplicationRunner {
         Member member2 = new Member("Steven", "steven@gmail.com", team2);
         memberRepository.save(member2);
 
-        Member member3 = new Member("Michael", "micheal@gmail.com", team3);
+        Member member3 = new Member("Michael", "michael@gmail.com", team3);
         memberRepository.save(member3);
 
         Member member4 = new Member("Robbie", "robbie@gmail.com", team1);
@@ -119,6 +119,11 @@ public class DataLoader implements ApplicationRunner {
 
         Task task2 = new Task(date11, date12, "All Hands Meeting", rehearsal2);
         taskRepository.save(task2);
+
+        task1.addMembers(member1);
+        task1.addMembers(member2);
+        task1.addMembers(member3);
+        taskRepository.save(task1);
 
 
     }

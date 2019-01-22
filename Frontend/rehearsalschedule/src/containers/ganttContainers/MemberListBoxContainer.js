@@ -8,13 +8,13 @@ class MemberListBoxContainer extends Component {
         this.state = {
             data: null
         };
-        this.getMembers()
+        this.getMembers = this.getMembers.bind(this);
     }
 
 
     getMembers(){
         let newArray = [];
-        for(let task of this.props.chartData){
+        for(let task of this.props){
             for(let members of task.members) {
                 newArray.push(members);
             }
@@ -26,16 +26,23 @@ class MemberListBoxContainer extends Component {
 
 
     componentDidMount() {
+
+        console.log(this.props);
         this.getMembers();
     }
 
 
     render() {
-        return (
-            <div>
-                <MemberListComponent members={this.state.data}/>
-            </div>
-        );
+        if (!this.props.chartData) {
+            return null;
+        }
+        else {
+            return (
+                <div>
+                    <MemberListComponent members={this.state.data}/>
+                </div>
+            )
+        }
     }
 
 
