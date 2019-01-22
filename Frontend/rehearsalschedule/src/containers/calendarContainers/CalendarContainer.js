@@ -97,8 +97,8 @@ class CalendarContainer extends Component {
                     events={this.state.rehearsals}
                     startAccessor="startTime"
                     endAccessor="endTime"
-                    titleAccessor="startTime"
-                    tooltipAccessor="startTime"
+                    titleAccessor="name"
+                    tooltipAccessor="name"
                     scrollToTime={scrollStartTime}
                     onSelectEvent={this.handleSelectRehearsalNewPage}
                     // Below prop uses custom event in EventComponent.js for the month view, switched off for now
