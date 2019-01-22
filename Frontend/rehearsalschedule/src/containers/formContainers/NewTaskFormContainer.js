@@ -12,7 +12,7 @@ class NewTaskFormContainer extends Component{
   handleTaskPost(task){
     let request = new Request();
     request.post('/api/tasks', task).then(() =>{
-      window.location= '/tasks'
+      window.location= '/calendar'
     });
   }
 

@@ -22,7 +22,7 @@ class NewTeamFormContainer extends Component{
   handleTeamPost(team){
     let request = new Request();
     request.post('/api/teams', team).then(() =>{
-      window.location= '/teams'
+      window.location= '/create-member'
     });
   }
 
