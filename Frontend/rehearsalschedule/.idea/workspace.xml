@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8eb5d1b6-c069-4262-b092-488a33e2ed8f" name="Default Changelist" comment="" />
+    <list default="true" id="8eb5d1b6-c069-4262-b092-488a33e2ed8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/formComponents/NewRehearsalForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formComponents/NewRehearsalForm.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -39,31 +41,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+        <entry file="file://$PROJECT_DIR$/src/containers/formContainers/NewRehearsalFormContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="21" column="19" lean-forward="true" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+            <state relative-caret-position="225">
+              <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/helpers/Request.js">
+        <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewRehearsalForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="186">
+              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/rehearsalsDummyData.js">
+        <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewProjectForm.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/containers/formContainers/NewProjectFormContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+            <state relative-caret-position="230">
+              <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -141,7 +145,6 @@
         <option value="$PROJECT_DIR$/src/containers/formContainers/NewMemberContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/formContainers/NewTeamContainer.js" />
         <option value="$PROJECT_DIR$/src/components/formComponents/NewProjectForm.js" />
-        <option value="$PROJECT_DIR$/src/components/formComponents/NewRehearsalForm.js" />
         <option value="$PROJECT_DIR$/src/components/formComponents/NewTaskForm.js" />
         <option value="$PROJECT_DIR$/src/components/formComponents/NewTeamForm.js" />
         <option value="$PROJECT_DIR$/src/containers/formContainers/NewMemberFormContainer.js" />
@@ -155,6 +158,7 @@
         <option value="$PROJECT_DIR$/src/helpers/Request.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" />
+        <option value="$PROJECT_DIR$/src/components/formComponents/NewRehearsalForm.js" />
       </list>
     </option>
   </component>
@@ -205,6 +209,13 @@
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
               <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="formComponents" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -213,6 +224,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="calendarContainers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="containers" type="462c0819:PsiDirectoryNode" />
+              <item name="formContainers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
@@ -270,7 +288,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36051000" />
+    <option name="totallyTimeSpent" value="36128000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -397,7 +415,11 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewRehearsalForm.js">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewTaskForm.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -417,15 +439,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/formContainers/NewRehearsalFormContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        <state relative-caret-position="225">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/formContainers/NewProjectFormContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="230">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
         </state>
       </provider>
     </entry>

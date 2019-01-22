@@ -10,9 +10,9 @@ const NewRehearsalForm = (props) =>{
   function handleSubmit(event){
     event.preventDefault();
     const rehearsal = {
-      "startTime": event.target.name.value,
-      "endTime": event.target.name.value,
-      "project": event.target.name.value,
+      "startTime": event.target.startTime.value,
+      "endTime": event.target.endTime.value,
+      "project": event.target.project.value,
       "name": event.target.name.value
     }
     props.handleRehearsalPost(rehearsal);
