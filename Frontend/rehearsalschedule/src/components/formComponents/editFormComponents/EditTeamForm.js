@@ -16,14 +16,8 @@ const EditTeamForm = (props) =>{
 
     function handleSubmit(event){
         event.preventDefault();
-        let submittedName = null;
-        if (!event.target.name.value) {
-            submittedName = props.team.name;
-        } else {
-            submittedName = event.target.name.value;
-        }
         const team = {
-            "name": submittedName,
+            "name": event.target.name.value,
             "project": "",
             "members": []
         };
@@ -35,7 +29,7 @@ const EditTeamForm = (props) =>{
             <form onSubmit={handleSubmit}>
                 <h1>Edit team</h1>
                 <label htmlFor="name">Edit team's name:</label>
-                    <input type="text" id="name" name="name" placeholder={props.team.name}/>
+                    <input type="text" id="name" name="name" defaultValue={props.team.name}/>
                 <p>Project: {props.team._embedded.project.name}</p>
                 {/*<select name="project">*/}
                     {/*<option*/}
