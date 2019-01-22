@@ -11,8 +11,8 @@ const Project = (props) =>{
     {name}
     </Link>
     </p>
-    <p> Start Date: {startDate}</p>
-    <p> End Date: {endDate}</p>
+    <p> Start Date: {startDate.slice(0, -18)}</p>
+    <p> End Date: {endDate.slice(0, -18)}</p>
     </div>
   )
 }

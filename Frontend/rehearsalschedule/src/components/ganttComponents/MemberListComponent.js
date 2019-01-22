@@ -2,9 +2,16 @@ import React from 'react'
 const MemberListComponent = (props) => {
 
 
-    if(!props.members){
+    if(!props.members) {
         return null
     }
+     // else if (props.members.length === 0){
+    //     return <div>
+    //         <h1>
+    //             No members required at this rehearsal!
+    //         </h1>
+    //     </div>
+    // }
 
 
     return (

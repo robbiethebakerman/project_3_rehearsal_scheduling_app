@@ -78,52 +78,77 @@ public class DataLoader implements ApplicationRunner {
         Project project = new Project("Christmas Panto", date13, date14);
         projectRepository.save(project);
 
+
         Team team1 = new Team("Band", project);
         teamRepository.save(team1);
-
         Team team2 = new Team("Cast", project);
         teamRepository.save(team2);
-
         Team team3 = new Team("Lighting", project);
         teamRepository.save(team3);
 
+
         Member member1 = new Member("Mandy", "mandy@gmail.com", team1);
         memberRepository.save(member1);
-
         Member member2 = new Member("Steven", "steven@gmail.com", team2);
         memberRepository.save(member2);
-
         Member member3 = new Member("Michael", "michael@gmail.com", team3);
         memberRepository.save(member3);
-
         Member member4 = new Member("Robbie", "robbie@gmail.com", team1);
         memberRepository.save(member4);
-
         Member member5 = new Member("Alex", "alex@gmail.com", team2);
         memberRepository.save(member5);
 
         Rehearsal rehearsal1 = new Rehearsal("Initial line reading", date1, date2, project);
         rehearsalRepository.save(rehearsal1);
-
         Rehearsal rehearsal2 = new Rehearsal("Non-dress rehearsal", date3, date4, project);
         rehearsalRepository.save(rehearsal2);
-
         Rehearsal rehearsal3 = new Rehearsal("Dress Rehearsal", date5, date6, project);
         rehearsalRepository.save(rehearsal3);
-
         Rehearsal rehearsal4 = new Rehearsal("Final Dress Rehearsal", date7, date8, project);
         rehearsalRepository.save(rehearsal4);
 
         Task task1 = new Task(date9, date10, "Tuning Session", rehearsal1);
         taskRepository.save(task1);
-
         Task task2 = new Task(date11, date12, "All Hands Meeting", rehearsal2);
         taskRepository.save(task2);
+
+        Task task3 = new Task(date11, date12, "Not a boring meeting, I promise", rehearsal3);
+        taskRepository.save(task3);
+
+        Task task4 = new Task(date1, date2, "Warm Up", rehearsal1);
+        taskRepository.save(task4);
+
+        Task task5 = new Task(date5, date6, "Getting shouted at by the director for not knowing your lines", rehearsal4);
+        taskRepository.save(task5);
+
+        task5.addMembers(member2);
+        task5.addMembers(member3);
+        task5.addMembers(member4);
+        task5.addMembers(member5);
+        taskRepository.save(task5);
+
+        task4.addMembers(member1);
+        task4.addMembers(member5);
+        taskRepository.save(task4);
+
+        task3.addMembers(member1);
+        task3.addMembers(member2);
+        task3.addMembers(member4);
+        taskRepository.save(task3);
+
 
         task1.addMembers(member1);
         task1.addMembers(member2);
         task1.addMembers(member3);
+        task1.addMembers(member4);
+        task1.addMembers(member5);
         taskRepository.save(task1);
+
+        task2.addMembers(member3);
+        task2.addMembers(member4);
+        taskRepository.save(task2);
+
+
 
 
     }

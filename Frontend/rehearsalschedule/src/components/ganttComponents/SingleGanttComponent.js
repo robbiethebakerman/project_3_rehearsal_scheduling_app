@@ -1,5 +1,6 @@
 import Chart from 'react-google-charts';
 import React, {Fragment} from 'react';
+import MemberListBoxContainer from "../../containers/ganttContainers/MemberListBoxContainer";
 
 const GanttChartComponent = (props) => {
 
@@ -15,6 +16,33 @@ const GanttChartComponent = (props) => {
             )
         }
 
+
+        let dataArray = [];
+
+        const makeDataForChart = () => {
+
+            let defaultParams = [
+                { type: "string", label: "Task ID" },
+                { type: 'string', label: 'Task Name' },
+                { type: 'date', label: 'Start Date' },
+                { type: 'date', label: 'End Date' },
+                { type: 'number', label: 'Duration' },
+                { type: 'number', label: 'Percent Complete' },
+                { type: 'string', label: 'Dependencies' },];
+
+            dataArray.push(defaultParams);
+
+            props.chartData.map((task) => {
+                 let array = [];
+                     array.push(`${task.id}`, `${task.name}`, new Date(task.startTime), new Date(task.endTime), null, 100, null);
+                 dataArray.push(array);
+            });
+
+
+        };
+
+        makeDataForChart();
+
         return (
 
             <Fragment>
@@ -26,51 +54,8 @@ const GanttChartComponent = (props) => {
                     chartType="Gantt"
                     loader={<div>Loading Chart</div>}
 
-                    data = {   [
+                    data = {dataArray}
 
-                        [
-                            { type: 'string', label: 'Task ID' },
-                            { type: 'string', label: 'Task Name' },
-                            { type: 'string', label: 'Resource' },
-                            { type: 'date', label: 'Start Date' },
-                            { type: 'date', label: 'End Date' },
-                            { type: 'number', label: 'Duration' },
-                            { type: 'number', label: 'Percent Complete' },
-                            { type: 'string', label: 'Dependencies' },
-                        ],
-                        [
-                            `${props.chartData[0].id}`,
-                            `${props.chartData[0].name}`,
-                            `${props.chartData[0].name}`,
-                            props.chartData[0].starttime,
-                            props.chartData[0].endtime,
-                            props.chartData[0].duration,
-                            100,
-                            null,
-                        ],
-                        // [
-                        //     `${props.chartData[1].taskID}`,
-                        //     `${props.chartData[1].taskName}`,
-                        //     `${props.chartData[1].resource}`,
-                        //     props.chartData[1].startDate,
-                        //     props.chartData[1].endDate,
-                        //     props.chartData[1].duration,
-                        //     100,
-                        //     null,
-                        // ],
-                        // [
-                        // `${props.chartData[2].taskID}`,
-                        // `${props.chartData[2].taskName}`,
-                        // `${props.chartData[2].resource}`,
-                        // props.chartData[2].startDate,
-                        // props.chartData[2].endDate,
-                        // props.chartData[2].duration,
-                        // 100,
-                        // null,
-                        // ]
-                    ]
-
-                    }
                 options={{
                     height: 400,
                     width: 750,
@@ -80,6 +65,7 @@ const GanttChartComponent = (props) => {
                 }}
                 rootProps={{ 'data-testid': '2' }}
                 />
+                <MemberListBoxContainer chartData={props}/>
             </div>
             </Fragment>
         )
