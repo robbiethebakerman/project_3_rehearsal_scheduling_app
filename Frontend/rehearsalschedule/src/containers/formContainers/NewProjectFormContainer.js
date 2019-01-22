@@ -12,7 +12,7 @@ class NewProjectFormContainer extends Component {
   handleProjectPost(project){
     let request = new Request();
     request.post('/api/projects', project).then(() =>{
-      window.location= '/projects'
+      window.location= '/create-team'
     });
   }
 

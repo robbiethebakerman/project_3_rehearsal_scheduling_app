@@ -3,7 +3,7 @@ import React from 'react';
 const NewTeamForm = (props) =>{
 
   const options = props.projects.map((project, index) =>{
-    return <option key={project.id}>{project.name}</option>
+    return <option key={project.id} value={project._links.self.href}>{project.name}</option>
   })
 
   function handleSubmit(event){
@@ -17,10 +17,11 @@ const NewTeamForm = (props) =>{
 
   return(
     <div>
-    <form onSubmit={handleSubmit}>
+    <form action="/button-type" onSubmit={handleSubmit}>
+    <p>Create a team</p>
     <input type="text" placeholder="Name" name="name" />
-    <input type="text" placeholder="eMail" name="email" />
     <select name="project">
+    <option value="" disabled selected>Select a Project</option>
     {options}
     </select>
     <button type="submit">Save</button>

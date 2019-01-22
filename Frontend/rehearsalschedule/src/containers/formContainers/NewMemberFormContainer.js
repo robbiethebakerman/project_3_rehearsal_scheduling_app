@@ -9,6 +9,7 @@ class NewMemberFormContainer extends Component {
       teams: []
     };
     this.handleMemberPost = this.handleMemberPost.bind(this);
+    // this.handleMemberClick = this.handleMemberClick.bind(this);
   }
 
 
@@ -19,19 +20,24 @@ class NewMemberFormContainer extends Component {
     })
   }
 
-
-
   handleMemberPost(member){
     let request = new Request();
     request.post('/api/members', member).then(() =>{
-      window.location= '/members'
+      window.location= '/create-rehearsal'
     });
   }
+
+  // handleMemberClick(member){
+  //   let request = new Request();
+  //   request.post('/api/members', member).then(() =>{
+  //     window.location= '/create-member'
+  //   });
+  // }
 
 
   render() {
     return(
-      <NewMemberForm teams={this.state.teams} handMemberPost={this.handleMemberPost}/>
+      <NewMemberForm teams={this.state.teams} handleMemberPost={this.handleMemberPost} />
     )
   }
 

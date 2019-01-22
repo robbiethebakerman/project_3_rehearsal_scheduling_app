@@ -54,7 +54,7 @@ public class DataLoader implements ApplicationRunner {
 //        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 //        LocalDateTime dateTime = LocalDateTime.parse(str, formatter);
 
-//        Note that the date can aslo be formatted back into a string as thus:
+//        Note that the date can also be formatted back into a string as thus:
 
 //        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 //        LocalDateTime dateTime = LocalDateTime.of(1986, Month.APRIL, 8, 12, 30);
@@ -102,16 +102,16 @@ public class DataLoader implements ApplicationRunner {
         Member member5 = new Member("Alex", "alex@gmail.com", team2);
         memberRepository.save(member5);
 
-        Rehearsal rehearsal1 = new Rehearsal(date1, date2, project);
+        Rehearsal rehearsal1 = new Rehearsal("Initial line reading", date1, date2, project);
         rehearsalRepository.save(rehearsal1);
 
-        Rehearsal rehearsal2 = new Rehearsal(date3, date4, project);
+        Rehearsal rehearsal2 = new Rehearsal("Non-dress rehearsal", date3, date4, project);
         rehearsalRepository.save(rehearsal2);
 
-        Rehearsal rehearsal3 = new Rehearsal(date5, date6, project);
+        Rehearsal rehearsal3 = new Rehearsal("Dress Rehearsal", date5, date6, project);
         rehearsalRepository.save(rehearsal3);
 
-        Rehearsal rehearsal4 = new Rehearsal(date7, date8, project);
+        Rehearsal rehearsal4 = new Rehearsal("Final Dress Rehearsal", date7, date8, project);
         rehearsalRepository.save(rehearsal4);
 
         Task task1 = new Task(date9, date10, "Tuning Session", rehearsal1);

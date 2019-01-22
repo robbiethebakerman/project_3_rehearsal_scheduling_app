@@ -17,6 +17,9 @@ public class Rehearsal {
     private Long id;
 
     @Column
+    private String name;
+
+    @Column
     private Date startTime;
 
     @Column
@@ -30,7 +33,8 @@ public class Rehearsal {
     @JoinColumn(name="project_id", nullable=false)
     private Project project;
 
-    public Rehearsal(Date startTime, Date endTime, Project project){
+    public Rehearsal(String name, Date startTime, Date endTime, Project project){
+        this.name = name;
         this.startTime = startTime;
         this.endTime = endTime;
         this.tasks = new ArrayList<>();
@@ -43,16 +47,16 @@ public class Rehearsal {
         return id;
     }
 
-    public Project getProject() {
-        return project;
-    }
-
-    public void setProject(Project project) {
-        this.project = project;
-    }
-
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Date getStartTime() {
@@ -77,6 +81,14 @@ public class Rehearsal {
 
     public void setTasks(List<Task> tasks) {
         this.tasks = tasks;
+    }
+
+    public Project getProject() {
+        return project;
+    }
+
+    public void setProject(Project project) {
+        this.project = project;
     }
 
     public void addTasks(Task task){
