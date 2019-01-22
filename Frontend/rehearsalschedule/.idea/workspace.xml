@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb5d1b6-c069-4262-b092-488a33e2ed8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ganttComponents/SingleGanttComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ganttComponents/SingleGanttComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/ganttContainers/SingleGanntContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ganttContainers/SingleGanntContainer.js" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/../../Backend/rehearsalschedule/src/main/java/com/codeclan/example/rehearsalschedule/components/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/rehearsalschedule/src/main/java/com/codeclan/example/rehearsalschedule/components/DataLoader.java" afterDir="false" />
+
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,8 +20,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/containers/ganttContainers/SingleGanntContainer.js">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="690">
               <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -31,23 +32,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#379#421#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/ganttComponents/SingleGanttComponent.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+
+            <state relative-caret-position="401">
+              <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -55,7 +45,22 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+
+        <entry file="file://$PROJECT_DIR$/src/components/ganttComponents/SingleGanttComponent.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+
         <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewMemberForm.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -69,6 +74,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+
             </state>
           </provider>
         </entry>
@@ -156,10 +162,12 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/formComponents/NewRehearsalForm.js" />
         <option value="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" />
+
         <option value="$PROJECT_DIR$/src/containers/ganttContainers/SingleGanntContainer.js" />
         <option value="$PROJECT_DIR$/src/components/ganttComponents/SingleGanttComponent.js" />
         <option value="$PROJECT_DIR$/src/components/formComponents/NewTaskForm.js" />
         <option value="$PROJECT_DIR$/src/components/formComponents/NewMemberForm.js" />
+
       </list>
     </option>
   </component>
@@ -243,6 +251,7 @@
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
               <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+
               <item name="containers" type="462c0819:PsiDirectoryNode" />
               <item name="ganttContainers" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -250,6 +259,7 @@
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
               <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+
               <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -309,7 +319,9 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+
     <option name="totallyTimeSpent" value="38943000" />
+
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -404,10 +416,13 @@
         </state>
       </provider>
     </entry>
+
+
     <entry file="file://$PROJECT_DIR$/src/components/ganttComponents/MemberListBoxContainer.js" />
     <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewProjectForm.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+
     <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewRehearsalForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
@@ -415,6 +430,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewTeamForm.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -422,13 +438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/formContainers/NewRehearsalFormContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -453,6 +462,8 @@
         </state>
       </provider>
     </entry>
+
+
     <entry file="file://$PROJECT_DIR$/src/NavBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
@@ -531,13 +542,16 @@
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
+
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="401">
           <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
+
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#379#421#0" expanded="true" />
@@ -545,6 +559,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/src/containers/ganttContainers/SingleGanntContainer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="690">
@@ -559,6 +574,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+
         </state>
       </provider>
     </entry>

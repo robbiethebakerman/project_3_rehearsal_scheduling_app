@@ -18,12 +18,15 @@ const NewTeamForm = (props) =>{
   return(
     <div>
     <form action="/button-type" onSubmit={handleSubmit}>
-    <p>Create a team</p>
-    <input type="text" placeholder="Name" name="name" />
+    <h1>Create a team</h1>
+    <label for="name">Enter member's name:</label>
+    <input type="text" id="name" name="name" />
+    <p></p>
     <select name="project">
     <option value="" disabled selected>Select a Project</option>
     {options}
     </select>
+    <p></p>
     <button type="submit">Save</button>
     </form>
     </div>

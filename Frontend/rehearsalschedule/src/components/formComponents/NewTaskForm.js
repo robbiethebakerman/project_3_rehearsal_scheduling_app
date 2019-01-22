@@ -10,9 +10,9 @@ const NewTaskForm = (props) =>{
     event.preventDefault();
     const task = {
       "name": event.target.name.value,
-      "startTime": event.target.name.value,
-      "endTime": event.target.name.value,
-      "rehearsal": event.target.name.value
+      "startTime": event.target.startTime.value,
+      "endTime": event.target.endTime.value,
+      "rehearsal": event.target.rehearsal.value
     }
     props.handleTaskPost(task);
   }
@@ -20,17 +20,22 @@ const NewTaskForm = (props) =>{
 
   return(
     <div>
-    <p>Create a task</p>
+    <h1>Create a task</h1>
     <form onSubmit={handleSubmit}>
     <label for="startTime">Enter start time:</label>
     <input type="datetime-local" id="startTime" name="startTime" />
+    <p></p>
     <label for="endTime">Enter end time:</label>
     <input type="datetime-local" id="endTime" name="endTime" />
-    <input type="text" placeholder="name" name="name" />
+    <p></p>
+    <label for="name">Enter Task Name:</label>
+    <input type="text" id="name" name="name" />
+    <p></p>
     <select name="rehearsal">
     <option value="" disabled selected>Select a Rehearsal</option>
     {options}
     </select>
+    <p></p>
     <button type="submit">Save</button>
     </form>
     </div>
