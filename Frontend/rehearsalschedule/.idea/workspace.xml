@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb5d1b6-c069-4262-b092-488a33e2ed8f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/formComponents/NewTaskForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/formComponents/NewTaskForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Backend/rehearsalschedule/src/main/java/com/codeclan/example/rehearsalschedule/components/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/rehearsalschedule/src/main/java/com/codeclan/example/rehearsalschedule/components/DataLoader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,7 +55,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewTaskForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
+            <state relative-caret-position="321">
               <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
             </state>
           </provider>
@@ -291,7 +290,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36717000" />
+    <option name="totallyTimeSpent" value="36955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -525,7 +524,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewTaskForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
+        <state relative-caret-position="321">
           <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
         </state>
       </provider>
