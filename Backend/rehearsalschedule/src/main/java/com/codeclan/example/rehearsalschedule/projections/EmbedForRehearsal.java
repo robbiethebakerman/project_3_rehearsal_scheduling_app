@@ -11,6 +11,7 @@ import java.util.List;
 @Projection(name="embedForRehearsal", types=Rehearsal.class)
 public interface EmbedForRehearsal {
     Long getId();
+    String getName();
     Date getStartTime();
     Date getEndTime();
     List<Task> getTasks();
