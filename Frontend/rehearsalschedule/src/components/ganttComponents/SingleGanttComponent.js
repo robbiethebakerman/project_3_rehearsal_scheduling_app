@@ -6,6 +6,13 @@ const GanttChartComponent = (props) => {
 
         if (!props.chartData) {
             return null;
+        }else if(props.chartData.length === 0){
+
+            return(
+                <div>
+                    <h1> There are no tasks in this rehearsal, please add Tasks</h1>
+                </div>
+            )
         }
 
         return (
