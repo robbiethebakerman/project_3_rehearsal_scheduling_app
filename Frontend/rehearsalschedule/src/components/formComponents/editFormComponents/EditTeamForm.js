@@ -35,7 +35,7 @@ const EditTeamForm = (props) =>{
             <form onSubmit={handleSubmit}>
                 <h1>Edit team</h1>
                 <label htmlFor="name">Edit team's name:</label>
-                <input type="text" id="name" name="name" placeholder={props.team.name}/>
+                    <input type="text" id="name" name="name" placeholder={props.team.name}/>
                 <p>Project: {props.team._embedded.project.name}</p>
                 {/*<select name="project">*/}
                     {/*<option*/}
