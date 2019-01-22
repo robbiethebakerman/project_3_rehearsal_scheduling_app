@@ -10,6 +10,7 @@ import NewTaskFormContainer from './containers/formContainers/NewTaskFormContain
 import NewTeamFormContainer from './containers/formContainers/NewTeamFormContainer';
 import ProjectContainer from './containers/ProjectContainer/ProjectContainer.js';
 import NavBar from './NavBar.js';
+import EditTeamFormContainer from "./containers/formContainers/editFormContainers/EditTeamFormContainer";
 
 class App extends Component {
   render() {
@@ -40,6 +41,10 @@ class App extends Component {
                     <Route exact path="/create-rehearsal" component={NewRehearsalFormContainer}/>
                     <Route exact path="/create-task" component={NewTaskFormContainer}/>
                     <Route exact path="/create-team" component={NewTeamFormContainer}/>
+                    <Route exact path="/edit-team/:id" render={(props) => {
+                        const id = props.match.params.id;
+                        return <EditTeamFormContainer id={id}/>;}
+                    } />
                 </Switch>
             </Fragment>
         </Router>

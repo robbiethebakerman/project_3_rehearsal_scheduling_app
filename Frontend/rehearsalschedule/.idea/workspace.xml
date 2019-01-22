@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8eb5d1b6-c069-4262-b092-488a33e2ed8f" name="Default Changelist" comment="">
-
-      <change beforePath="$PROJECT_DIR$/../../Backend/rehearsalschedule/src/main/java/com/codeclan/example/rehearsalschedule/components/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Backend/rehearsalschedule/src/main/java/com/codeclan/example/rehearsalschedule/components/DataLoader.java" afterDir="false" />
-
+      <change afterPath="$PROJECT_DIR$/src/components/formComponents/editFormComponents/EditTeamForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/formContainers/editFormContainers/EditTeamFormContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/formContainers/NewTeamFormContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/formContainers/NewTeamFormContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/Request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Request.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,65 +19,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/containers/ganttContainers/SingleGanntContainer.js">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-
-            <state relative-caret-position="690">
-              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-
+            <state relative-caret-position="423">
+              <caret line="42" column="87" selection-start-line="42" selection-start-column="87" selection-end-line="42" selection-end-column="87" />
               <folding>
-                <element signature="e#0#49#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ganttComponents/SingleGanttComponent.js">
+        <entry file="file://$PROJECT_DIR$/src/containers/formContainers/editFormContainers/EditTeamFormContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-
-            <state relative-caret-position="401">
-              <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-
+            <state relative-caret-position="225">
+              <caret line="38" column="40" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
               <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-
-        <entry file="file://$PROJECT_DIR$/src/components/ganttComponents/SingleGanttComponent.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-
-        <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewMemberForm.js">
+        <entry file="file://$PROJECT_DIR$/src/components/formComponents/editFormComponents/EditTeamForm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="67">
+              <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewTaskForm.js">
+        <entry file="file://$PROJECT_DIR$/src/helpers/Request.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-
+            <state relative-caret-position="279">
+              <caret line="51" column="24" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,6 +102,7 @@
       <find>rbc-time-header</find>
       <find>rbc-time-content</find>
       <find>rbc-agenda-table</find>
+      <find>react-is</find>
     </findStrings>
     <replaceStrings>
       <replace>location</replace>
@@ -152,22 +139,22 @@
         <option value="$PROJECT_DIR$/src/components/formComponents/NewProjectForm.js" />
         <option value="$PROJECT_DIR$/src/components/formComponents/NewTeamForm.js" />
         <option value="$PROJECT_DIR$/src/containers/formContainers/NewMemberFormContainer.js" />
-        <option value="$PROJECT_DIR$/src/containers/formContainers/NewTeamFormContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/formContainers/NewProjectFormContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/formContainers/NewRehearsalFormContainer.js" />
         <option value="$PROJECT_DIR$/src/containers/formContainers/NewTaskFormContainer.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/NavBar.js" />
-        <option value="$PROJECT_DIR$/src/helpers/Request.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/formComponents/NewRehearsalForm.js" />
         <option value="$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js" />
-
         <option value="$PROJECT_DIR$/src/containers/ganttContainers/SingleGanntContainer.js" />
         <option value="$PROJECT_DIR$/src/components/ganttComponents/SingleGanttComponent.js" />
         <option value="$PROJECT_DIR$/src/components/formComponents/NewTaskForm.js" />
         <option value="$PROJECT_DIR$/src/components/formComponents/NewMemberForm.js" />
-
+        <option value="$PROJECT_DIR$/src/containers/formContainers/NewTeamFormContainer.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/containers/formContainers/editFormContainers/EditTeamFormContainer.js" />
+        <option value="$PROJECT_DIR$/src/helpers/Request.js" />
+        <option value="$PROJECT_DIR$/src/components/formComponents/editFormComponents/EditTeamForm.js" />
       </list>
     </option>
   </component>
@@ -183,6 +170,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,11 +181,6 @@
             <path>
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
               <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -205,13 +188,6 @@
               <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="calendarComponents" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
@@ -225,20 +201,14 @@
               <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ganttComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="formComponents" type="462c0819:PsiDirectoryNode" />
+              <item name="editFormComponents" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
               <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="calendarContainers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
@@ -251,28 +221,14 @@
               <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
               <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-
               <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="ganttContainers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="rehearsalschedule" type="b2602c69:ProjectViewProjectNode" />
-              <item name="rehearsalschedule" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+              <item name="formContainers" type="462c0819:PsiDirectoryNode" />
+              <item name="editFormContainers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,15 +275,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-
-    <option name="totallyTimeSpent" value="38943000" />
-
+    <option name="totallyTimeSpent" value="48642000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23326287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22057787" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -416,35 +370,14 @@
         </state>
       </provider>
     </entry>
-
-
     <entry file="file://$PROJECT_DIR$/src/components/ganttComponents/MemberListBoxContainer.js" />
     <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewProjectForm.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-
     <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewRehearsalForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-
-    <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewTeamForm.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/formContainers/NewMemberFormContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/formContainers/NewProjectFormContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -455,15 +388,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/formContainers/NewTeamFormContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-
-
     <entry file="file://$PROJECT_DIR$/src/NavBar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
@@ -483,16 +407,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/helpers/Request.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -518,16 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewTaskForm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -535,34 +439,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewMemberForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/formContainers/NewProjectFormContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/formContainers/editFormContainers/EditMemberFormContainer.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/formContainers/NewMemberFormContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ganttComponents/SingleGanttComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="65" selection-start-line="31" selection-start-column="65" selection-end-line="31" selection-end-column="65" />
+        <state relative-caret-position="161">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
-
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-
-        <state relative-caret-position="401">
-          <caret line="58" column="38" lean-forward="true" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#379#421#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-
     <entry file="file://$PROJECT_DIR$/src/containers/ganttContainers/SingleGanntContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
+        <state relative-caret-position="130">
           <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
@@ -570,11 +486,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewMemberForm.js">
+    <entry file="file://$PROJECT_DIR$/src/components/formComponents/NewTeamForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-
+        <state relative-caret-position="-68">
+          <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="42" column="87" selection-start-line="42" selection-start-column="87" selection-end-line="42" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/helpers/Request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="51" column="24" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/calendarContainers/CalendarContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="97" column="45" lean-forward="true" selection-start-line="97" selection-start-column="45" selection-end-line="97" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#379#421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/formContainers/NewTeamFormContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/formContainers/editFormContainers/EditTeamFormContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="38" column="40" lean-forward="true" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/formComponents/editFormComponents/EditTeamForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
         </state>
       </provider>
     </entry>
