@@ -30,7 +30,6 @@ class NewRehearsalFormContainer extends Component{
     return(
       <div>
       <NewRehearsalForm projects={this.state.projects} handleRehearsalPost={this.handleRehearsalPost} />
-      <p>I'm a NewRehearsalContainer</p>
       </div>
     )
   }
