@@ -9,6 +9,7 @@ const GanttChartComponent = (props) => {
         }
 
         return (
+
             <Fragment>
             <div className={"gantt-chart"}>
                 <Chart
@@ -31,35 +32,35 @@ const GanttChartComponent = (props) => {
                             { type: 'string', label: 'Dependencies' },
                         ],
                         [
-                            `${props.chartData[0].taskID}`,
-                            `${props.chartData[0].taskName}`,
-                            `${props.chartData[0].resource}`,
-                            props.chartData[0].startDate,
-                            props.chartData[0].endDate,
+                            `${props.chartData[0].id}`,
+                            `${props.chartData[0].name}`,
+                            `${props.chartData[0].name}`,
+                            props.chartData[0].starttime,
+                            props.chartData[0].endtime,
                             props.chartData[0].duration,
                             100,
                             null,
                         ],
-                        [
-                            `${props.chartData[1].taskID}`,
-                            `${props.chartData[1].taskName}`,
-                            `${props.chartData[1].resource}`,
-                            props.chartData[1].startDate,
-                            props.chartData[1].endDate,
-                            props.chartData[1].duration,
-                            100,
-                            null,
-                        ],
-                        [
-                        `${props.chartData[2].taskID}`,
-                        `${props.chartData[2].taskName}`,
-                        `${props.chartData[2].resource}`,
-                        props.chartData[2].startDate,
-                        props.chartData[2].endDate,
-                        props.chartData[2].duration,
-                        100,
-                        null,
-                        ]
+                        // [
+                        //     `${props.chartData[1].taskID}`,
+                        //     `${props.chartData[1].taskName}`,
+                        //     `${props.chartData[1].resource}`,
+                        //     props.chartData[1].startDate,
+                        //     props.chartData[1].endDate,
+                        //     props.chartData[1].duration,
+                        //     100,
+                        //     null,
+                        // ],
+                        // [
+                        // `${props.chartData[2].taskID}`,
+                        // `${props.chartData[2].taskName}`,
+                        // `${props.chartData[2].resource}`,
+                        // props.chartData[2].startDate,
+                        // props.chartData[2].endDate,
+                        // props.chartData[2].duration,
+                        // 100,
+                        // null,
+                        // ]
                     ]
 
                     }
@@ -77,8 +78,6 @@ const GanttChartComponent = (props) => {
         )
 
 };
-
-
 
 
 export default GanttChartComponent;
