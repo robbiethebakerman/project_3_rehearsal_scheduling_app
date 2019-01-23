@@ -32,12 +32,19 @@ class App extends Component {
                             const id = props.match.params.id;
                             return <SinglePirateContainer id={id}/>
                       }}/>*/}
+
                     <Route exact path="/calendar" component={CalendarContainer}/>
 
                     <Route exact path="/calendar/:id" render={(props) => {
                         const id = props.match.params.id;
                         return <SingleGanntContainer id={id}/>;}
                     } />
+
+                    <Route exact path={"/calendar/projects/:id/rehearsals"} render={(props) => {
+                        const id = props.match.params.id;
+                        return <CalendarContainer id={id}/>}
+                    }/>
+
                     <Route exact path="/" component={ProjectContainer}/>
                     <Route exact path="/create-member" component={NewMemberFormContainer}/>
                     <Route exact path="/create-project" component={NewProjectFormContainer}/>
