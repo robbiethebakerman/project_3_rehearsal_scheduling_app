@@ -5,19 +5,24 @@ import Request from '../../helpers/Request.js';
 class ProjectContainer extends Component{
   constructor(props){
     super(props);
-    this.state = {projects: []}
+    this.state = {projects: []};
+    // this.getAllProjects = this.getAllProjects.bind(this);
   }
 
-  componentDidMount(){
+  getAllProjects() {
     let request = new Request();
     request.get('/api/projects').then((data) =>{
       this.setState({projects: data._embedded.projects})
     })
   }
 
+  componentDidMount(){
+    this.getAllProjects();
+  }
+
   handleDelete(project_id) {
     const request = new Request();
-    request.delete(`/api/projects/${project_id}`);
+    request.delete(`/api/projects/${project_id}`)
   }
 
   render(){

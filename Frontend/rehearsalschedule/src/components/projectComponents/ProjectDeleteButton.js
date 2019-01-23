@@ -9,8 +9,8 @@ const ProjectDeleteButton = (props) =>{
     };
 
     return (
-        <button onClick={props.handleDelete}>Delete Project</button>
+        <button onClick={handleDelete}>Delete Project</button>
     )
-}
+};
 
 export default ProjectDeleteButton;
