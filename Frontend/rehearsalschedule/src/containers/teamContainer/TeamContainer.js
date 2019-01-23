@@ -8,6 +8,7 @@ class TeamContainer extends Component{
     this.state ={
       teams: []
     }
+    this.handleEditClick = this.handleEditClick.bind(this);
   }
 
   componentDidMount(){
@@ -18,10 +19,13 @@ class TeamContainer extends Component{
     })
   }
 
+  handleEditClick(id){
+    window.location = `/edit-team/${id}/`;
+  }
 
 render(){
   return(
-    <TeamList teams={this.state.teams}/>
+    <TeamList teams={this.state.teams} handleEditClick={this.handleEditClick}/>
   );
 }
 

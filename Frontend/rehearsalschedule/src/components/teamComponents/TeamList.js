@@ -8,7 +8,7 @@ const TeamList = (props) => {
   const teams = props.teams.map((team) => {
     console.log("teamlist props", props);
 		 	return (<li key={team.id} className="component-item">
-				<Team team={team} />
+				<Team team={team} handleEditClick={props.handleEditClick}/>
 			</li>
 		)
       console.log("teamlist team", team);

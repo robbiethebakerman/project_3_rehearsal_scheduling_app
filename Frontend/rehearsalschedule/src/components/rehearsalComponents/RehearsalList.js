@@ -7,7 +7,7 @@ const RehearsalList = (props) => {
 
   const rehearsals = props.rehearsals.map((rehearsal) => {
 		 	return (<li key={rehearsal.id} className="component-item">
-				<Rehearsal rehearsal={rehearsal} />
+				<Rehearsal rehearsal={rehearsal} handleEditClick={props.handleEditClick} />
 			</li>
 		)
 		})

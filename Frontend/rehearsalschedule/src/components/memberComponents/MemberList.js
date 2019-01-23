@@ -7,7 +7,7 @@ const MemberList = (props) => {
 
   const members = props.members.map((member) => {
 		 	return (<li key={member.id} className="component-item">
-				<Member member={member} />
+				<Member member={member} handleEditClick={props.handleEditClick}/>
 			</li>
 		)
 		})

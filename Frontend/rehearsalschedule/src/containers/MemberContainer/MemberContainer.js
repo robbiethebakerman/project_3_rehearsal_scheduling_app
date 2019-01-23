@@ -8,6 +8,7 @@ class MemberContainer extends Component{
     this.state ={
       members: []
     }
+    this.handleEditClick = this.handleEditClick.bind(this)
   }
 
   componentDidMount(){
@@ -17,10 +18,14 @@ class MemberContainer extends Component{
     })
   }
 
+  handleEditClick(id){
+    window.location = `/edit-member/${id}/`;
+  }
+
 
 render(){
   return(
-    <MemberList members={this.state.members}/>
+    <MemberList members={this.state.members} handleEditClick={this.handleEditClick}/>
   );
 }
 

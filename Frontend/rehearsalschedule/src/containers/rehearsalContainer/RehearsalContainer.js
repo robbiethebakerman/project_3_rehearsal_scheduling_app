@@ -8,6 +8,7 @@ class RehearsalContainer extends Component{
     this.state ={
       rehearsals: []
     }
+    this.handleEditClick = this.handleEditClick.bind(this)
   }
 
   componentDidMount(){
@@ -17,10 +18,13 @@ class RehearsalContainer extends Component{
     })
   }
 
+  handleEditClick(id){
+    window.location = `/edit-rehearsal/${id}/`;
+  }
 
 render(){
   return(
-    <RehearsalList rehearsals={this.state.rehearsals}/>
+    <RehearsalList rehearsals={this.state.rehearsals} handleEditClick={this.handleEditClick}/>
   );
 }
 
