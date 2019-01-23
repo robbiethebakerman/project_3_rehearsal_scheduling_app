@@ -7,7 +7,7 @@ class ProjectDeleteWarningMessage extends Component {
     }
 
     handleDelete() {
-        this.props.handleDelete(this.props.project.id);
+        this.props.handleDeleteConfirm(this.props.project.id);
     };
 
     render() {
@@ -22,7 +22,3 @@ class ProjectDeleteWarningMessage extends Component {
 }
 
 export default ProjectDeleteWarningMessage;
-
-// handleDelete() {
-//     this.props.handleClick(props.project.id);
-// };

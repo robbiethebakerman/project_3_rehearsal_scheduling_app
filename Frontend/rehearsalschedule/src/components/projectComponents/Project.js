@@ -14,7 +14,7 @@ const Project = (props) =>{
         </p>
         <p> Start Date: {startDate.slice(0, -18)}</p>
         <p> End Date: {endDate.slice(0, -18)}</p>
-        <ProjectDeleteButton project={props.project} handleDelete={props.handleDelete}/>
+        <ProjectDeleteButton project={props.project} handleDeleteClick={props.handleDeleteClick}/>
       </div>
   )
 }
