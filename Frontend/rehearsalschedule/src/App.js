@@ -14,6 +14,7 @@ import EditTeamFormContainer from "./containers/formContainers/editFormContainer
 import EditMemberFormContainer from "./containers/formContainers/editFormContainers/EditMemberFormContainer";
 import EditRehearsalFormContainer from "./containers/formContainers/editFormContainers/EditRehearsalFormContainer";
 import EditTaskFormContainer from "./containers/formContainers/editFormContainers/EditTaskFormContainer";
+import EditProjectFormContainer from "./containers/formContainers/editFormContainers/EditProjectFormContainer";
 import TeamContainer from "./containers/teamContainer/TeamContainer.js";
 import TaskContainer from "./containers/taskContainer/TaskContainer.js";
 import MemberContainer from "./containers/MemberContainer/MemberContainer.js";
@@ -70,6 +71,10 @@ class App extends Component {
                     <Route exact path="/edit-task/:id" render={(props) => {
                         const id = props.match.params.id;
                         return <EditTaskFormContainer id={id}/>;}
+                    } />
+                    <Route exact path="/edit-project/:id" render={(props) => {
+                        const id = props.match.params.id;
+                        return <EditProjectFormContainer id={id}/>;}
                     } />
                     <Route exact path="/tasks" component={TaskContainer}/>
                     <Route exact path="/teams" component={TeamContainer}/>
