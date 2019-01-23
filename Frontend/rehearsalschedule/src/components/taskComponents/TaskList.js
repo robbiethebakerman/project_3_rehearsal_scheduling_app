@@ -7,7 +7,7 @@ const TaskList = (props) => {
 
   const tasks = props.tasks.map((task) => {
 		 	return (<li key={task.id} className="component-item">
-				<Task task={task} />
+				<Task task={task} handleEditClick={props.handleEditClick} />
 			</li>
 		)
 		})

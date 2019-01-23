@@ -8,6 +8,7 @@ class TaskContainer extends Component{
     this.state ={
       tasks: []
     }
+    this.handleEditClick = this.handleEditClick.bind(this);
   }
 
   componentDidMount(){
@@ -18,11 +19,15 @@ class TaskContainer extends Component{
     })
   }
 
+ handleEditClick(id){
+   window.location = `/edit-task/${id}/`;
+ }
+
 
 render(){
   return(
-    <TaskList tasks={this.state.tasks}/>
-  );
+    <TaskList tasks={this.state.tasks} handleEditClick={this.handleEditClick}/>
+  )
 }
 
 }
