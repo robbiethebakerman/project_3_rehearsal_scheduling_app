@@ -6,7 +6,7 @@ const ProjectList = (props) =>{
   const projects = props.projects.map((project) =>{
     return(
       <li key={project.id} className="component-item">
-      <Project project={project} />
+        <Project project={project} handleDeleteClick={props.handleDeleteClick} handleEditClick={props.handleEditClick}/>
       </li>
     )
   })
@@ -16,6 +16,6 @@ const ProjectList = (props) =>{
     {projects}
     </ul>
   )
-}
+};
 
 export default ProjectList;

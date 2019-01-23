@@ -1,6 +1,7 @@
 package com.codeclan.example.rehearsalschedule.models;
 
 import com.codeclan.example.rehearsalschedule.models.Rehearsal;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -19,9 +20,11 @@ public class Project {
     private String name;
 
     @OneToMany(mappedBy = "project")
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     private List<Team> teams;
 
     @OneToMany(mappedBy = "project")
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
 //    @JoinColumn(name="rehearsal_id", nullable=true)
     private List <Rehearsal> rehearsals;
 

@@ -45,7 +45,7 @@ public class Task {
     private List<Member> members;
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name ="rehearsal_id", nullable=false)
+    @JoinColumn(name ="rehearsal_id", nullable=true)
     private Rehearsal rehearsal;
 
     public Task(Date startTime, Date endTime, String name, Rehearsal rehearsal) {
