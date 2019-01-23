@@ -44,7 +44,7 @@ public class Task {
     )
     private List<Member> members;
 
-    @JsonIgnoreProperties("tasks")
+    @JsonIgnoreProperties({"tasks", "project"})
     @ManyToOne
     @JoinColumn(name ="rehearsal_id", nullable=false)
     private Rehearsal rehearsal;

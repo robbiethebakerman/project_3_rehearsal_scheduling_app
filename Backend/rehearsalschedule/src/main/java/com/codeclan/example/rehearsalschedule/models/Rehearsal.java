@@ -31,6 +31,7 @@ public class Rehearsal {
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     private List<Task> tasks;
 
+    @JsonIgnoreProperties("rehearsals")
     @ManyToOne
     @JoinColumn(name="project_id", nullable=false)
     private Project project;

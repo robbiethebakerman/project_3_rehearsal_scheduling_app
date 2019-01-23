@@ -21,7 +21,7 @@ public class Member {
     @Column(name="email")
     private String email;
 
-    @JsonIgnoreProperties("members")
+    @JsonIgnoreProperties({"members", "project"})
     @ManyToOne
     @JoinColumn(name="team_id", nullable=false)
     private Team team;
