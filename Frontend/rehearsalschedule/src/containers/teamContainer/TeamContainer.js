@@ -1,21 +1,52 @@
 import React, {Component} from 'react';
 import TeamList from '../../components/teamComponents/TeamList.js';
 import Request from '../../helpers/Request.js';
+import TeamDeleteWarningMessage from '../../components/teamComponents/TeamDeleteWarningMessage';
 
 class TeamContainer extends Component{
   constructor(props){
-    super(props)
-    this.state ={
-      teams: []
-    }
+    super(props);
+    this.state = {
+      teams: [],
+      warningMessage: null
+    };
     this.handleEditClick = this.handleEditClick.bind(this);
+    this.handleDeleteConfirm = this.handleDeleteConfirm.bind(this);
+    this.handleDeleteReject = this.handleDeleteReject.bind(this);
+    this.handleDeleteClick = this.handleDeleteClick.bind(this);
+  }
+
+  getAllTeams() {
+    const request = new Request();
+    let id = this.props.id
+    request.get(`/api/projects/${id}/teams`).then((data) => {
+      this.setState({teams: data._embedded.teams})
+    })
   }
 
   componentDidMount(){
-    let request = new Request();
-    request.get('/api/teams').then((data) =>{
-      this.setState({teams: data._embedded.teams})
-      console.log("teamcontainer", data);
+    this.getAllTeams();
+  }
+
+  handleDeleteConfirm(team_id) {
+    const request = new Request();
+    request.delete(`/api/teams/${team_id}`).then(() => {
+      this.setState({warningMessage: null});
+      this.getAllTeams();
+    })
+  }
+
+  handleDeleteReject() {
+    this.setState({warningMessage: null});
+  }
+
+  handleDeleteClick(team) {
+    this.setState({
+      warningMessage: <TeamDeleteWarningMessage
+          handleDeleteConfirm={this.handleDeleteConfirm}
+          handleDeleteReject={this.handleDeleteReject}
+          team={team}
+      />
     })
   }
 
@@ -25,11 +56,17 @@ class TeamContainer extends Component{
 
 render(){
   return(
-    <TeamList teams={this.state.teams} handleEditClick={this.handleEditClick}/>
+    <div>
+      <TeamList
+          teams={this.state.teams}
+          handleEditClick={this.handleEditClick}
+          handleDeleteClick={this.handleDeleteClick}
+      />
+      {this.state.warningMessage}
+    </div>
   );
 }
 
 }
-
 
 export default TeamContainer;
