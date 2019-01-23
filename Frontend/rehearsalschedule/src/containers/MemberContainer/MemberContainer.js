@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import MemberList from '../../components/memberComponents/MemberList.js';
 import Request from '../../helpers/Request.js';
-import MemberDeleteWarningMessage from "../../components/memberComponents/MemberDeleteWarningMessage"
+import MemberDeleteWarningMessage from "../../components/memberComponents/MemberDeleteWarningMessage.js"
 
 class MemberContainer extends Component{
   constructor(props){
