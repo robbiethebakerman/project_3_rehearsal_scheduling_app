@@ -28,7 +28,7 @@ class EditProjectFormContainer extends Component{
   handleProjectPost(project){
     let request = new Request();
     request.put('/api/projects', project).then(()=>
-    window.location = '/calendar');
+    window.location = '/');
   }
 
   render() {

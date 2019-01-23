@@ -26,7 +26,7 @@ class EditRehearsalFormContainer extends Component{
     handleRehearsalPut(rehearsal){
         let request = new Request();
         request.put(`/api/rehearsals/${this.props.id}`, rehearsal).then(() =>{
-            window.location= '/calendar'
+            window.location= '/'
         });
     }
 

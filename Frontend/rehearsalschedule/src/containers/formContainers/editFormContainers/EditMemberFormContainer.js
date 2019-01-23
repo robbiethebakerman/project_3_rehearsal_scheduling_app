@@ -25,7 +25,7 @@ class EditMemberFormContainer extends Component {
     handleMemberPut(member){
         let request = new Request();
         request.put(`/api/members/${this.props.id}`, member).then(() =>{
-            window.location= '/calendar'
+            window.location= '/'
         });
     }
 

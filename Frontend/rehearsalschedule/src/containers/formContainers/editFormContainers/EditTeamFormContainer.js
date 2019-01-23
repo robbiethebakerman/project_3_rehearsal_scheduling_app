@@ -36,7 +36,7 @@ class EditTeamFormContainer extends Component{
     handleTeamPut(team){
         const request = new Request();
         request.put(`/api/teams/${this.props.id}`, team).then(() =>{
-            window.location= '/calendar'
+            window.location= '/'
         });
     }
 

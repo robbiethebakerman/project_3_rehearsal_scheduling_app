@@ -40,7 +40,7 @@ class EditTaskFormContainer extends Component{
     const request = new Request();
     request.put(`/api/tasks/${this.props.id}`, task).then(() =>{
       console.log("handleput", task);
-        window.location= '/calendar'
+        window.location= '/'
     });
   }
 
