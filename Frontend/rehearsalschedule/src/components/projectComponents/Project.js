@@ -24,6 +24,9 @@ const Project = (props) =>{
         </p>
         <p> Start Date: {startDate.slice(0, -18)}</p>
         <p> End Date: {endDate.slice(0, -18)}</p>
+          <Link to={`/projects/${id}/tasks`}>
+              View all tasks for this project
+          </Link>
         <button onClick={handleEditClick}>Edit</button>
         <button onClick={handleClick}>Delete Project</button>
       </div>
