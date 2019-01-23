@@ -1,23 +1,26 @@
 import React from 'react';
 
-
-
 const Task = (props) =>{
 
- function handleClick(event){
-  event.preventDefault();
-  console.log(event);
-  props.handleEditClick(props.task.id);
-}
+    function handleEditClick(event){
+        event.preventDefault();
+        props.handleEditClick(props.task.id);
+    }
 
-  return(
-    <div className="component">
-    <li className="name">{props.task.name} <button onClick={handleClick}>Edit</button> </li>
-    </div>
-  );
+    const handleDeleteClick = function() {
+        props.handleDeleteClick(props.task);
+    };
 
-}
+    return(
+        <div className="component">
+            <li className="name">
+                {props.task.name}
+                <button onClick={handleEditClick}>Edit Task</button>
+                <button onClick={handleDeleteClick}>Delete Task</button>
+            </li>
+        </div>
+    );
 
-
+};
 
 export default Task;

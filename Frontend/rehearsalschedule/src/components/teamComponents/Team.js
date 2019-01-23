@@ -1,23 +1,26 @@
 import React from 'react';
 
-
-
 const Team = (props) =>{
 
-  function handleClick(event){
-   event.preventDefault();
-   console.log(event);
-   props.handleEditClick(props.team.id);
- }
+    function handleEditClick(event){
+        event.preventDefault();
+        props.handleEditClick(props.team.id);
+    }
 
-  return(
-    <div className="component">
-    <li className="name">{props.team.name} <button onClick={handleClick}>Edit</button></li>
-    </div>
-  )
+    const handleDeleteClick = function() {
+        props.handleDeleteClick(props.team);
+    };
 
-}
+    return(
+        <div className="component">
+            <li className="name">
+                {props.team.name}
+                <button onClick={handleEditClick}>Edit Team</button>
+                <button onClick={handleDeleteClick}>Delete Team</button>
+            </li>
+        </div>
+    )
 
-
+};
 
 export default Team;
