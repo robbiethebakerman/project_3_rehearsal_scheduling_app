@@ -11,6 +11,8 @@ import NewTeamFormContainer from './containers/formContainers/NewTeamFormContain
 import ProjectContainer from './containers/ProjectContainer/ProjectContainer.js';
 import NavBar from './NavBar.js';
 import EditTeamFormContainer from "./containers/formContainers/editFormContainers/EditTeamFormContainer";
+import EditMemberFormContainer from "./containers/formContainers/editFormContainers/EditMemberFormContainer";
+import EditRehearsalFormContainer from "./containers/formContainers/editFormContainers/EditRehearsalFormContainer";
 
 class App extends Component {
   render() {
@@ -44,6 +46,14 @@ class App extends Component {
                     <Route exact path="/edit-team/:id" render={(props) => {
                         const id = props.match.params.id;
                         return <EditTeamFormContainer id={id}/>;}
+                    } />
+                    <Route exact path="/edit-member/:id" render={(props) => {
+                        const id = props.match.params.id;
+                        return <EditMemberFormContainer id={id}/>;}
+                    } />
+                    <Route exact path="/edit-rehearsal/:id" render={(props) => {
+                        const id = props.match.params.id;
+                        return <EditRehearsalFormContainer id={id}/>;}
                     } />
                 </Switch>
             </Fragment>

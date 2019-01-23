@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Request from '../../../helpers/Request.js';
 import EditTeamForm from "../../../components/formComponents/editFormComponents/EditTeamForm";
 

@@ -6,24 +6,18 @@ const EditTeamForm = (props) =>{
         return null;
     }
 
-    const options = props.projects.map((project, index) =>{
-        return  <option
-                    key={project.id}
-                    value={project._links.self.href}>
-                        {project.name}
-                </option>
-    });
+    // const options = props.projects.map((project, index) =>{
+    //     return  <option
+    //                 key={project.id}
+    //                 value={project._links.self.href}>
+    //                     {project.name}
+    //             </option>
+    // });
 
     function handleSubmit(event){
         event.preventDefault();
-        let submittedName = null;
-        if (!event.target.name.value) {
-            submittedName = props.team.name;
-        } else {
-            submittedName = event.target.name.value;
-        }
         const team = {
-            "name": submittedName,
+            "name": event.target.name.value,
             "project": "",
             "members": []
         };
@@ -32,10 +26,10 @@ const EditTeamForm = (props) =>{
 
     return(
         <div>
-            <form action="/button-type" onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <h1>Edit team</h1>
                 <label htmlFor="name">Edit team's name:</label>
-                <input type="text" id="name" name="name" placeholder={props.team.name}/>
+                    <input type="text" id="name" name="name" defaultValue={props.team.name}/>
                 <p>Project: {props.team._embedded.project.name}</p>
                 {/*<select name="project">*/}
                     {/*<option*/}
