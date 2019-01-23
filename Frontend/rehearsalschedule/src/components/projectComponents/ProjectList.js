@@ -16,6 +16,6 @@ const ProjectList = (props) =>{
     {projects}
     </ul>
   )
-}
+};
 
 export default ProjectList;

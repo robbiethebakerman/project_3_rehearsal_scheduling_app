@@ -1,30 +1,24 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class ProjectDeleteWarningMessage extends Component {
-    constructor(props) {
-        super(props);
-        this.handleDelete = this.handleDelete.bind(this);
-        this.handleReject = this.handleReject.bind(this);
-    }
+const ProjectDeleteWarningMessage = (props) => {
 
-    handleDelete() {
-        this.props.handleDeleteConfirm(this.props.project.id);
+    const handleDelete = function() {
+        props.handleDeleteConfirm(props.project.id);
     };
 
-    handleReject() {
-        this.props.handleDeleteReject();
-    }
+    const handleReject = function() {
+        props.handleDeleteReject();
+    };
 
-    render() {
-        return (
-            <div>
-                <p>I'm a warning message</p>
-                <button onClick={this.handleDelete}>Yes, Delete</button>
-                <button onClick={this.handleReject}>No, don't delete!</button>
-            </div>
-        )
-    }
+    return (
+        <div>
+            <p>I'm a warning message</p>
+            <button onClick={handleDelete}>Yes, Delete</button>
+            <button onClick={handleReject}>No, don't delete!</button>
+        </div>
+    )
 
-}
+
+};
 
 export default ProjectDeleteWarningMessage;

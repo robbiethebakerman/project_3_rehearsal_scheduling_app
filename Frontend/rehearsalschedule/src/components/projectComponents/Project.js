@@ -1,10 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import ProjectDeleteButton from './ProjectDeleteButton';
 
 const Project = (props) =>{
 
   const{id, name, startDate, endDate} = props.project;
+
+  const handleClick = function() {
+    props.handleDeleteClick(props.project);
+  };
+
   return (
       <div className="component">
         <p className="name">
@@ -14,9 +18,9 @@ const Project = (props) =>{
         </p>
         <p> Start Date: {startDate.slice(0, -18)}</p>
         <p> End Date: {endDate.slice(0, -18)}</p>
-        <ProjectDeleteButton project={props.project} handleDeleteClick={props.handleDeleteClick}/>
+        <button onClick={handleClick}>Delete Project</button>
       </div>
   )
-}
+};
 
 export default Project;
