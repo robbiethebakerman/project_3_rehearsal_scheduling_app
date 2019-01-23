@@ -105,6 +105,7 @@ class CalendarContainer extends Component {
                     // components={{month: {event: EventComponent}}}
                     formats={formats}
                     popup={true}
+                    views={['month', 'agenda']}
                 />
                 {this.state.rehearsalPopup}
             </div>
