@@ -18,12 +18,10 @@ class TaskContainer extends Component{
   }
 
   getAllTasks() {
-    console.log("container props", this.props);
     let request = new Request();
     let id = this.props.id
     request.get(`/api/projects/${id}/tasks`).then((data) =>{
       this.setState({tasks: data})
-      console.log("componenet did mount, taskcontainer", data);
     })
 
   }

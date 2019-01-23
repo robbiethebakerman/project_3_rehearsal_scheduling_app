@@ -19,7 +19,7 @@ const NewTeamForm = (props) =>{
     <div>
     <form action="/button-type" onSubmit={handleSubmit}>
     <h1>Create a team</h1>
-    <label for="name">Enter member's name:</label>
+    <label for="name">Enter team name:</label>
     <input type="text" id="name" name="name" />
     <p></p>
     <select name="project">

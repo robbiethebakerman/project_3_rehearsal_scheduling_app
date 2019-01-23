@@ -61,19 +61,22 @@ public class DataLoader implements ApplicationRunner {
 //        String formattedDateTime = dateTime.format(formatter); // "1986-04-08 12:30"
 
         Date date1 = new Date(119, 0, 15, 12, 00);
-        Date date2 = new Date(119, 0, 15, 13, 00);
+        Date date2 = new Date(119, 0, 15, 17, 00);
+
         Date date3 = new Date(119, 0, 17, 11, 00);
         Date date4 = new Date(119, 0, 17, 17, 30);
         Date date5 = new Date(119, 0, 20, 12, 00);
         Date date6 = new Date(119, 0, 20, 15, 00);
         Date date7 = new Date(119, 0, 22, 10, 30);
         Date date8 =  new Date(119, 0, 22, 16, 30);
-        Date date9 =  new Date(119, 1, 15, 12, 00);
-        Date date10 = new Date(119, 1, 15, 13, 00);
+        Date date9 =  new Date(119, 1, 15, 12, 30);
+        Date date10 = new Date(119, 1, 15, 13, 45);
         Date date11 =  new Date(119, 0, 17, 11, 30);
         Date date12 =  new Date(119, 0, 17, 13, 30);
         Date date13 = new Date(119, 0, 1, 11, 00);
         Date date14 = new Date(119, 0, 28, 17, 30);
+        Date date15 = new Date(119, 0, 15, 12, 15);
+        Date date16 = new Date(119, 0, 15, 12,30);
 
         Project project = new Project("Christmas Panto", date13, date14);
         projectRepository.save(project);
@@ -107,15 +110,15 @@ public class DataLoader implements ApplicationRunner {
         Rehearsal rehearsal4 = new Rehearsal("Final Dress Rehearsal", date7, date8, project);
         rehearsalRepository.save(rehearsal4);
 
-        Task task1 = new Task(date9, date10, "Tuning Session", rehearsal1);
+        Task task1 = new Task(date1, date15, "Welcome Session", rehearsal1);
         taskRepository.save(task1);
-        Task task2 = new Task(date11, date12, "All Hands Meeting", rehearsal2);
+        Task task2 = new Task(date2, date3, "All Hands Meeting", rehearsal2);
         taskRepository.save(task2);
 
         Task task3 = new Task(date11, date12, "Not a boring meeting, I promise", rehearsal3);
         taskRepository.save(task3);
 
-        Task task4 = new Task(date1, date2, "Warm Up", rehearsal1);
+        Task task4 = new Task(date15, date16, "Warm Up", rehearsal1);
         taskRepository.save(task4);
 
         Task task5 = new Task(date5, date6, "Getting shouted at by the director for not knowing your lines", rehearsal4);

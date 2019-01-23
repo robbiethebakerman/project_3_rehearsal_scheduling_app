@@ -58,7 +58,7 @@ const GanttChartComponent = (props) => {
 
                 options={{
                     height: 400,
-                    width: 750,
+                    width: 1200,
                     gantt: {
                         trackHeight: 30,
                     },

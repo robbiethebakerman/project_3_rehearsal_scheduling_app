@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import MemberList from '../../components/memberComponents/MemberList.js';
 import Request from '../../helpers/Request.js';
-import MemberDeleteWarningMessage from "../../components/memberComponents/MemberDeleteWarningMessage"
+import MemberDeleteWarningMessage from "../../components/memberComponents/MemberDeleteWarningMessage.js"
 
 class MemberContainer extends Component{
   constructor(props){
-    super(props)
+    super(props);
     this.state ={
       members: [],
       warningMessage: null
@@ -18,8 +18,9 @@ class MemberContainer extends Component{
 
   getAllMembers(){
     let request = new Request();
-    request.get('/api/members').then((data) =>{
-      this.setState({members: data._embedded.members})
+    let id = this.props.id
+    request.get(`/api/projects/${id}/members`).then((data) =>{
+      this.setState({members: data})
     })
   }
 
