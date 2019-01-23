@@ -34,7 +34,7 @@ return(
   <form action="/button-type" onSubmit={handleSubmit}>
   <h1>Edit Task</h1>
   <label for="name">Edit name:</label>
-  <input type="datetime-local" id="name" name="name" defaultValue={props.task.name} />
+  <input type="text" id="name" name="name" defaultValue={props.task.name} />
   <label for="startTime">Edit start time:</label>
   <input type="datetime-local" id="startTime" name="startTime" />
   <label for="endTime">Edit end time:</label>
