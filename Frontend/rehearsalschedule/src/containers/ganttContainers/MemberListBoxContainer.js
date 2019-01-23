@@ -15,9 +15,12 @@ class MemberListBoxContainer extends Component {
     getMembers(){
         let memberNames = [];
         this.props.chartData.chartData.map((task)=>{
-            task.members.map((member)=>{
-                memberNames.push(member.name);
-            });
+            let array = [];
+            array.push(task.name, task.members.map((member)=>{
+                return member.name
+
+            }));
+            memberNames.push(array);
             memberNames.flat(1);
             this.setState({data: memberNames});
         });

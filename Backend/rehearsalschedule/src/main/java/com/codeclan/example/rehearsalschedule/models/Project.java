@@ -1,6 +1,7 @@
 package com.codeclan.example.rehearsalschedule.models;
 
 import com.codeclan.example.rehearsalschedule.models.Rehearsal;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
@@ -19,10 +20,12 @@ public class Project {
     @Column(name="name")
     private String name;
 
+    @JsonIgnoreProperties("project")
     @OneToMany(mappedBy = "project")
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     private List<Team> teams;
 
+    @JsonIgnoreProperties("project")
     @OneToMany(mappedBy = "project")
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
 //    @JoinColumn(name="rehearsal_id", nullable=true)

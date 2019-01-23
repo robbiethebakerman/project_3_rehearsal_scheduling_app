@@ -19,12 +19,12 @@ public class Team {
     @Column(name="name")
     private String name;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("team")
     @OneToMany(mappedBy = "team")
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     private List<Member> members;
 
-    @JsonIgnore
+    @JsonIgnoreProperties("teams")
     @ManyToOne
     @JoinColumn(name="project_id", nullable=false)
     private Project project;
