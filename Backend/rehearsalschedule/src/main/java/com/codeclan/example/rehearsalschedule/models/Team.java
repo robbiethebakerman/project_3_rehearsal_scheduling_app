@@ -1,5 +1,6 @@
 package com.codeclan.example.rehearsalschedule.models;
 
+import org.hibernate.annotations.Cascade;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -20,6 +21,7 @@ public class Team {
 
     @JsonIgnore
     @OneToMany(mappedBy = "team")
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     private List<Member> members;
 
     @JsonIgnore
