@@ -11,6 +11,7 @@ class ProjectContainer extends Component{
       warningMessage: null
     };
     this.handleDeleteConfirm = this.handleDeleteConfirm.bind(this);
+    this.handleDeleteReject = this.handleDeleteReject.bind(this);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
   }
 
@@ -33,10 +34,15 @@ class ProjectContainer extends Component{
     })
   }
 
+  handleDeleteReject() {
+    this.setState({warningMessage: null});
+  }
+
   handleDeleteClick(project) {
     this.setState({
       warningMessage: <ProjectDeleteWarningMessage
           handleDeleteConfirm={this.handleDeleteConfirm}
+          handleDeleteReject={this.handleDeleteReject}
           project={project}
       />
     })
