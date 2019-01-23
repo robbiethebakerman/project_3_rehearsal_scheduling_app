@@ -118,7 +118,7 @@ button.rbc-input::-moz-focus-inner {
   z-index: 4;
 }
 .rbc-today {
-  background-color: #eaf6ff;
+  background-color: #87B8C9;
 }
 .rbc-toolbar {
   display: -webkit-flex;
@@ -290,7 +290,7 @@ border: none;
   box-shadow: none;
   margin: 0;
   padding: 2px 5px;
-  background-color: #8b3232;
+  background-color: #8C4A5F;
   /*border-radius: 3px;*/
   color: #fff;
   cursor: pointer;

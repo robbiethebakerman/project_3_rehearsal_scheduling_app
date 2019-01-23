@@ -17,11 +17,15 @@ const NewProjectForm = (props) =>{
     <div>
     <h1>Create a Project</h1>
     <form onSubmit={handleSubmit}>
-    <input type="text" placeholder="Name" name="name" />
+    <label for="name">Enter Project Title:</label>
+    <input type="text" id="Name" name="name" />
+    <p></p>
     <label for="startDate">Choose start date:</label>
     <input type="date" id="startDate" name="startDate" />
+    <p></p>
     <label for="endDate">Choose end date:</label>
     <input type="date" id="endDate" name="endDate" />
+    <p></p>
     <button type="submit">Save</button>
     </form>
     </div>

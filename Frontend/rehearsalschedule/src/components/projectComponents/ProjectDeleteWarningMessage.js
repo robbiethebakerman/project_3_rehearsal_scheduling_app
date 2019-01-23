@@ -11,8 +11,9 @@ const ProjectDeleteWarningMessage = (props) => {
     };
 
     return (
-        <div>
-            <p>I'm a warning message</p>
+        <div className="ProjectDelete">
+            <p>Careful!</p>
+            <p>Deleting a project deletes all related tasks, rehearsals and members!</p>
             <button onClick={handleDelete}>Yes, Delete</button>
             <button onClick={handleReject}>No, don't delete!</button>
         </div>
