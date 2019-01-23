@@ -15,7 +15,6 @@ const TeamList = (props) => {
 		)
   });
 
-
   return (
     <div>
       <ul className="component-list">
@@ -24,8 +23,6 @@ const TeamList = (props) => {
     </div>
   )
 
-
-}
-
+};
 
 export default TeamList;

@@ -1,28 +1,28 @@
 import React from 'react';
 import Task from './task.js';
 
-
-
 const TaskList = (props) => {
 
-  const tasks = props.tasks.map((task) => {
-		 	return (<li key={task.id} className="component-item">
-				<Task task={task} handleEditClick={props.handleEditClick} />
-			</li>
-		)
-		})
+    const tasks = props.tasks.map((task) => {
+        return (
+            <li key={task.id} className="component-item">
+                <Task
+                    task={task}
+                    handleEditClick={props.handleEditClick}
+                    handleDeleteClick={props.handleDeleteClick}
+                />
+            </li>
+        )
+    });
 
+    return (
+        <div>
+            <ul className="component-list">
+                {tasks}
+            </ul>
+        </div>
+    )
 
-  return (
-    <div>
-      <ul className="component-list">
-        {tasks}
-        </ul>
-    </div>
-  )
-
-
-}
-
+};
 
 export default TaskList;

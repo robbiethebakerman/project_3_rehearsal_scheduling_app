@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TeamDeleteWarningMessage = (props) => {
+const TaskDeleteWarningMessage = (props) => {
 
     const handleDelete = function() {
-        props.handleDeleteConfirm(props.team.id);
+        props.handleDeleteConfirm(props.task.id);
     };
 
     const handleReject = function() {
@@ -20,4 +20,4 @@ const TeamDeleteWarningMessage = (props) => {
 
 };
 
-export default TeamDeleteWarningMessage;
+export default TaskDeleteWarningMessage;

@@ -5,8 +5,8 @@ import TeamDeleteWarningMessage from '../../components/teamComponents/TeamDelete
 
 class TeamContainer extends Component{
   constructor(props){
-    super(props)
-    this.state ={
+    super(props);
+    this.state = {
       teams: [],
       warningMessage: null
     };
@@ -18,7 +18,7 @@ class TeamContainer extends Component{
 
   getAllTeams() {
     const request = new Request();
-    request.get('/api/teams').then((data) =>{
+    request.get('/api/teams').then((data) => {
       this.setState({teams: data._embedded.teams})
     })
   }
