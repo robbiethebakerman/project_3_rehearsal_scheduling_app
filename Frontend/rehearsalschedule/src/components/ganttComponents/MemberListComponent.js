@@ -5,13 +5,16 @@ const MemberListComponent = (props) => {
     if(!props.members) {
         return null
     }
-     // else if (props.members.length === 0){
-    //     return <div>
-    //         <h1>
-    //             No members required at this rehearsal!
-    //         </h1>
-    //     </div>
-    // }
+
+    console.log(props);
+    for(let parentArray of props.members){
+        for(let item of parentArray){
+            console.log(item[0]);
+            for(let names of parentArray[1]){
+                console.log(names)
+            }
+        }
+    }
 
 
     return (
@@ -25,6 +28,7 @@ const MemberListComponent = (props) => {
             </h5>
         </div>
     )
+
 };
 
 export default MemberListComponent

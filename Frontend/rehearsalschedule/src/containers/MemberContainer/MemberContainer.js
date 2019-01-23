@@ -5,7 +5,7 @@ import MemberDeleteWarningMessage from "../../components/memberComponents/Member
 
 class MemberContainer extends Component{
   constructor(props){
-    super(props)
+    super(props);
     this.state ={
       members: [],
       warningMessage: null
