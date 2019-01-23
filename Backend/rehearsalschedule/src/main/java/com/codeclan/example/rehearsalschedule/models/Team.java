@@ -1,6 +1,8 @@
 package com.codeclan.example.rehearsalschedule.models;
 
 import org.hibernate.annotations.Cascade;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -17,10 +19,12 @@ public class Team {
     @Column(name="name")
     private String name;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "team")
     @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     private List<Member> members;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name="project_id", nullable=false)
     private Project project;

@@ -1,6 +1,8 @@
 package com.codeclan.example.rehearsalschedule.models;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.hibernate.annotations.Cascade;
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -25,6 +27,7 @@ public class Task {
     private String name;
 
     @ManyToMany
+    @JsonIgnore
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @JoinTable(
             name="members_tasks",
@@ -40,7 +43,7 @@ public class Task {
 
     )
     private List<Member> members;
-
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name ="rehearsal_id", nullable=false)
     private Rehearsal rehearsal;
