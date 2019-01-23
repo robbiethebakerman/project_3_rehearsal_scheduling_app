@@ -27,7 +27,7 @@ public class Task {
     private String name;
 
     @ManyToMany
-    @JsonIgnore
+    @JsonIgnoreProperties("tasks")
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @JoinTable(
             name="members_tasks",
@@ -43,7 +43,8 @@ public class Task {
 
     )
     private List<Member> members;
-    @JsonIgnore
+
+    @JsonIgnoreProperties("tasks")
     @ManyToOne
     @JoinColumn(name ="rehearsal_id", nullable=false)
     private Rehearsal rehearsal;
