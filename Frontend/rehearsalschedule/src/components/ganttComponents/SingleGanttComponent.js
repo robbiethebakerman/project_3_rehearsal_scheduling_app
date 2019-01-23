@@ -1,5 +1,6 @@
 import Chart from 'react-google-charts';
 import React, {Fragment} from 'react';
+import MemberListBoxContainer from "../../containers/ganttContainers/MemberListBoxContainer";
 
 const GanttChartComponent = (props) => {
 
@@ -15,7 +16,6 @@ const GanttChartComponent = (props) => {
             )
         }
 
-        console.log("props from SGC:", props.chartData[0]);
 
         let dataArray = [];
 
@@ -31,14 +31,14 @@ const GanttChartComponent = (props) => {
                 { type: 'string', label: 'Dependencies' },];
 
             dataArray.push(defaultParams);
-            console.log(props.chartData);
+
             props.chartData.map((task) => {
                  let array = [];
                      array.push(`${task.id}`, `${task.name}`, new Date(task.startTime), new Date(task.endTime), null, 100, null);
                  dataArray.push(array);
             });
 
-            console.log("makeDataForChart:", dataArray)
+
         };
 
         makeDataForChart();
@@ -65,6 +65,7 @@ const GanttChartComponent = (props) => {
                 }}
                 rootProps={{ 'data-testid': '2' }}
                 />
+                <MemberListBoxContainer chartData={props}/>
             </div>
             </Fragment>
         )

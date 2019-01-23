@@ -7,7 +7,7 @@ const Project = (props) =>{
   return (
     <div className="component">
     <p className="name">
-    <Link to={"/projects/" + id} className="name">
+    <Link to={`/calendar/projects/${id}/rehearsals`} className="name">
     {name}
     </Link>
     </p>

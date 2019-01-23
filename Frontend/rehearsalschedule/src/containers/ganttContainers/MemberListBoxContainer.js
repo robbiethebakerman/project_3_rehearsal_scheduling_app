@@ -9,25 +9,23 @@ class MemberListBoxContainer extends Component {
             data: null
         };
         this.getMembers = this.getMembers.bind(this);
+        // this.getNames = this.getNames.bind(this);
     }
-
 
     getMembers(){
-        let newArray = [];
-        for(let task of this.props){
-            for(let members of task.members) {
-                newArray.push(members);
-            }
-        }
-        newArray.flat(1);
-        console.log("getMembers:", newArray);
-        this.state.data = newArray;
+        let memberNames = [];
+        this.props.chartData.chartData.map((task)=>{
+            task.members.map((member)=>{
+                memberNames.push(member.name);
+            });
+            memberNames.flat(1);
+            this.setState({data: memberNames});
+        });
     }
+
 
 
     componentDidMount() {
-
-        console.log(this.props);
         this.getMembers();
     }
 

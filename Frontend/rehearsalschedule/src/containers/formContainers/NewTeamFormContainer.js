@@ -4,7 +4,7 @@ import Request from '../../helpers/Request.js';
 
 class NewTeamFormContainer extends Component{
   constructor(props){
-    super(props)
+    super(props);
     this.state = {projects: []};
     this.handleTeamPost = this.handleTeamPost.bind(this);
   }
