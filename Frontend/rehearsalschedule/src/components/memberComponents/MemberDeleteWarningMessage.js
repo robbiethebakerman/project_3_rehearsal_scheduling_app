@@ -19,4 +19,4 @@ const MemberDeleteWarningMessage = (props) => {
   )
 };
 
-export default MemberDeleteWarningMEssage;
+export default MemberDeleteWarningMessage;
