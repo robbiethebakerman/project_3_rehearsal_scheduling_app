@@ -14,7 +14,7 @@ const Team = (props) =>{
     return(
         <div className="component">
             <li className="name">
-                {props.team.name}
+                <p>{props.team.name}</p>
                 <button onClick={handleEditClick}>Edit Team</button>
                 <button onClick={handleDeleteClick}>Delete Team</button>
             </li>

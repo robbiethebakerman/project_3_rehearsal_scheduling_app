@@ -3,7 +3,7 @@
 }
 
 .big-calendar {
-    height: 700px;
+    height: 660px;
     margin: 10px;
 }
 
@@ -14,4 +14,9 @@ h1 {
     padding: 20px;
     background-color: #8D658B;
     font-size: 20px;
+}
+
+.calendar-footer-links {
+    display: flex;
+    justify-content: space-around;
 }

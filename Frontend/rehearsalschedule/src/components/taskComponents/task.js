@@ -14,7 +14,7 @@ const Task = (props) =>{
     return(
         <div className="component">
             <li className="name">
-                {props.task.name}
+                <p>{props.task.name}</p>
                 <button onClick={handleEditClick}>Edit Task</button>
                 <button onClick={handleDeleteClick}>Delete Task</button>
             </li>

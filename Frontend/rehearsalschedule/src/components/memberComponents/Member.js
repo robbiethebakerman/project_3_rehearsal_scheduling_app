@@ -17,9 +17,10 @@ const{id, name, email, team} = props.member;
  
   return(
     <div className="component">
-    <li className="name">{props.member.name}
-    <button onClick={handleEditClick}>Edit</button>
-    <button onClick={handleDeleteClick}>Delete Member</button>
+    <li className="name">
+        <p>{props.member.name}</p>
+        <button onClick={handleEditClick}>Edit Member</button>
+        <button onClick={handleDeleteClick}>Delete Member</button>
     </li>
     </div>
   )

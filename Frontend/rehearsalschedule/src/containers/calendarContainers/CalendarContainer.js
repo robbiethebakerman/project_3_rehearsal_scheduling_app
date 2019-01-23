@@ -11,6 +11,7 @@ import 'moment/locale/en-gb';
 import rehearsals from './rehearsalsDummyData';
 import EventComponent from '../../components/calendarComponents/EventComponent.js';
 import Request from '../../helpers/Request.js';
+import {Link} from "react-router-dom";
 
 // Setting locale to en-GB (i.e., UK)) using moment,
 // then creating a localizer to be assigned to BigCalendar component (for sorting times and dates)
@@ -25,7 +26,7 @@ class CalendarContainer extends Component {
             rehearsalPopup: null
         };
         this.handleSelectRehearsalNewPage = this.handleSelectRehearsalNewPage.bind(this);
-        this.handleSelectRehearsalShowElement = this.handleSelectRehearsalShowElement.bind(this);
+        // this.handleSelectRehearsalShowElement = this.handleSelectRehearsalShowElement.bind(this);
         // this.getAllRehearsals = this.getAllRehearsals.bind(this);
         this.getAllRehearsalsForSpecificProject = this.getAllRehearsalsForSpecificProject.bind(this);
     }
@@ -71,10 +72,10 @@ class CalendarContainer extends Component {
         // window.location = "/gantt";
     }
 
-    handleSelectRehearsalShowElement(rehearsal) {
-        const newElement = <h1>rehearsal popup element for {rehearsal.location}</h1>;
-        this.setState({rehearsalPopup: newElement});
-    }
+    // handleSelectRehearsalShowElement(rehearsal) {
+    //     const newElement = <h1>rehearsal popup element for {rehearsal.location}</h1>;
+    //     this.setState({rehearsalPopup: newElement});
+    // }
 
     render() {
         // setting a default time of 9 for scrollToTime
@@ -120,6 +121,17 @@ class CalendarContainer extends Component {
                     views={['month', 'agenda']}
                 />
                 {this.state.rehearsalPopup}
+                <div className="calendar-footer-links">
+                    <Link to={`/projects/${this.props.id}/tasks`}>
+                        View all tasks for this project
+                    </Link>
+                    <Link to={`/projects/${this.props.id}/teams`}>
+                        View all teams for this project
+                    </Link>
+                    <Link to={`/projects/${this.props.id}/members`}>
+                        View all members for this project
+                    </Link>
+                </div>
             </div>
         )
     }

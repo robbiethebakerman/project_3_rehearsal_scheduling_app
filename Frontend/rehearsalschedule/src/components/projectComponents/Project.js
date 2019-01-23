@@ -27,7 +27,16 @@ const Project = (props) =>{
           <Link to={`/projects/${id}/tasks`}>
               View all tasks for this project
           </Link>
-        <button onClick={handleEditClick}>Edit</button>
+          <br/>
+          <Link to={`/projects/${id}/teams`}>
+              View all teams for this project
+          </Link>
+          <br/>
+          <Link to={`/projects/${id}/members`}>
+              View all members for this project
+          </Link>
+          <br/>
+          <button onClick={handleEditClick}>Edit</button>
         <button onClick={handleClick}>Delete Project</button>
       </div>
   )
