@@ -9,13 +9,16 @@ class TaskContainer extends Component{
       tasks: []
     }
     this.handleEditClick = this.handleEditClick.bind(this);
+
   }
 
   componentDidMount(){
+    console.log("container props", this.props);
     let request = new Request();
-    request.get('/api/tasks').then((data) =>{
-      this.setState({tasks: data._embedded.tasks})
-      console.log("taskcontainer", data);
+    let id = this.props.id
+    request.get(`/api/projects/${id}/tasks`).then((data) =>{
+      this.setState({tasks: data})
+      console.log("componenet did mount, taskcontainer", data);
     })
   }
 
