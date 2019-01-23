@@ -26,15 +26,25 @@ class CalendarContainer extends Component {
         };
         this.handleSelectRehearsalNewPage = this.handleSelectRehearsalNewPage.bind(this);
         this.handleSelectRehearsalShowElement = this.handleSelectRehearsalShowElement.bind(this);
-        this.getAllRehearsals = this.getAllRehearsals.bind(this);
+        // this.getAllRehearsals = this.getAllRehearsals.bind(this);
+        this.getAllRehearsalsForSpecificProject = this.getAllRehearsalsForSpecificProject.bind(this);
     }
 
-    getAllRehearsals() {
+    // getAllRehearsals() {
+    //     let request = new Request();
+    //     request.get('/api/rehearsals').then((data) => {
+    //             this.setState({rehearsals: data._embedded.rehearsals});
+    //         })
+    // }
+
+    getAllRehearsalsForSpecificProject(){
         let request = new Request();
-        request.get('/api/rehearsals').then((data) => {
-                this.setState({rehearsals: data._embedded.rehearsals});
-            })
+        request.get(`/api/projects/${this.props.id}/rehearsals`).then((data) => {
+            this.setState({rehearsals:data._embedded.rehearsals})
+        })
     }
+
+
 
     addTimeRangeStringToRehearsalObjects() {
         this.state.rehearsals.forEach((rehearsal) => {
@@ -46,7 +56,9 @@ class CalendarContainer extends Component {
 
     componentDidMount() {
         this.addTimeRangeStringToRehearsalObjects();
-        this.getAllRehearsals();
+        // this.getAllRehearsals();
+        this.getAllRehearsalsForSpecificProject()
+
     }
 
     // To be used with React Big Calendars built-in onSelectEvent prop (or onDoubleClickEvent)
