@@ -6,7 +6,7 @@ class ProjectContainer extends Component{
   constructor(props){
     super(props);
     this.state = {projects: []};
-    // this.getAllProjects = this.getAllProjects.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   getAllProjects() {
@@ -22,7 +22,9 @@ class ProjectContainer extends Component{
 
   handleDelete(project_id) {
     const request = new Request();
-    request.delete(`/api/projects/${project_id}`)
+    request.delete(`/api/projects/${project_id}`).then(() => {
+      this.getAllProjects();
+    })
   }
 
   render(){

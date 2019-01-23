@@ -1,5 +1,7 @@
 package com.codeclan.example.rehearsalschedule.models;
 
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +18,7 @@ public class Team {
     private String name;
 
     @OneToMany(mappedBy = "team")
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
     private List<Member> members;
 
     @ManyToOne
