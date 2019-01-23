@@ -29,9 +29,9 @@ return(
   <label for="name">Edit name:</label>
   <input type="text" id="name" name="name" defaultValue={props.project.name} />
   <label for="startTime">Edit start date:</label>
-  <input type="date" id="startDate" name="startDate" />
+  <input type="date" id="startDate" name="startDate" defaultValue={props.project.startDate.slice(0, 10)}/>
   <label for="endTime">Edit end date:</label>
-  <input type="date" id="endDate" name="endDate" />
+  <input type="date" id="endDate" name="endDate" defaultValue={props.project.endDate.slice(0, 10)}/>
   <button type="submit">Save</button>
   </form>
   </div>

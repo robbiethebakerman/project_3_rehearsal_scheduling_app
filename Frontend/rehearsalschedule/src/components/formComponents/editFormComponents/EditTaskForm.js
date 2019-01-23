@@ -36,9 +36,9 @@ return(
   <label for="name">Edit name:</label>
   <input type="text" id="name" name="name" defaultValue={props.task.name} />
   <label for="startTime">Edit start time:</label>
-  <input type="datetime-local" id="startTime" name="startTime" />
+  <input type="datetime-local" id="startTime" name="startTime" defaultValue={props.task.startTime.slice(0, 19)}/>
   <label for="endTime">Edit end time:</label>
-  <input type="datetime-local" id="endTime" name="endTime" />
+  <input type="datetime-local" id="endTime" name="endTime" defaultValue={props.task.endTime.slice(0, 19)}/>
   <p> Rehearsal: {props.task._embedded.rehearsal.name}</p>
   <button type="submit">Save</button>
   </form>
