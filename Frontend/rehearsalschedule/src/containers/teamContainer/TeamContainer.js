@@ -18,7 +18,8 @@ class TeamContainer extends Component{
 
   getAllTeams() {
     const request = new Request();
-    request.get('/api/teams').then((data) => {
+    let id = this.props.id
+    request.get(`/api/projects/${id}/teams`).then((data) => {
       this.setState({teams: data._embedded.teams})
     })
   }
