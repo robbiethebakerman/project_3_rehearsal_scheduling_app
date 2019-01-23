@@ -21,11 +21,12 @@ public class Member {
     @Column(name="email")
     private String email;
 
+    @JsonIgnoreProperties("members")
     @ManyToOne
     @JoinColumn(name="team_id", nullable=false)
     private Team team;
 
-
+    @JsonIgnoreProperties("members")
     @ManyToMany
     @Cascade(org.hibernate.annotations.CascadeType.SAVE_UPDATE)
     @JoinTable(
