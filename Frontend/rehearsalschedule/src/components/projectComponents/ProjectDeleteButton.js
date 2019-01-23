@@ -1,16 +1,31 @@
-import React from 'react';
+import React, {Component} from 'react';
+import ProjectDeleteWarningMessage from './ProjectDeleteWarningMessage';
 
-const ProjectDeleteButton = (props) =>{
+class ProjectDeleteButton extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {warningMessage: null};
+        this.handleClick = this.handleClick.bind(this);
+    }
 
-    // const{id, name, startDate, endDate} = props.project;
-
-    const handleDelete = function() {
-      props.handleDelete(props.project.id);
+    handleClick() {
+      this.setState({
+          warningMessage: <ProjectDeleteWarningMessage
+              handleDelete={this.props.handleDelete}
+              project={this.props.project}
+          />
+      })
     };
 
-    return (
-        <button onClick={handleDelete}>Delete Project</button>
-    )
+    render() {
+        return (
+            <div>
+                <button onClick={this.handleClick}>Delete Project</button>
+                {this.state.warningMessage}
+            </div>
+        )
+    }
+
 };
 
 export default ProjectDeleteButton;
