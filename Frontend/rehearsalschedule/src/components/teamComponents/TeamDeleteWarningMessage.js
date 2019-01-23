@@ -11,8 +11,9 @@ const TeamDeleteWarningMessage = (props) => {
     };
 
     return (
-        <div>
-            <p>I'm a warning message</p>
+        <div className="delete-warning-message">
+            <p>Careful!</p>
+            <p>Deleting a team deletes all related members!</p>
             <button onClick={handleDelete}>Yes, Delete</button>
             <button onClick={handleReject}>No, don't delete!</button>
         </div>

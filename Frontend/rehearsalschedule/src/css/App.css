@@ -7,7 +7,7 @@ body{
   background: #A3CFCD;
 }
 
-.ProjectDelete{
+.delete-warning-message {
   position: absolute;
   left: 300px;
   top: 200px;
