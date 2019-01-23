@@ -4,7 +4,7 @@ import Request from '../../helpers/Request.js';
 
 class MemberContainer extends Component{
   constructor(props){
-    super(props)
+    super(props);
     this.state ={
       members: []
     }
