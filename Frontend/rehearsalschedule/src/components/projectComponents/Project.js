@@ -9,6 +9,12 @@ const Project = (props) =>{
     props.handleDeleteClick(props.project);
   };
 
+  function handleEditClick(event){
+   event.preventDefault();
+   console.log(event);
+   props.handleEditClick(props.project.id);
+ }
+
   return (
       <div className="component">
         <p className="name">
@@ -18,6 +24,7 @@ const Project = (props) =>{
         </p>
         <p> Start Date: {startDate.slice(0, -18)}</p>
         <p> End Date: {endDate.slice(0, -18)}</p>
+        <button onClick={handleEditClick}>Edit</button>
         <button onClick={handleClick}>Delete Project</button>
       </div>
   )

@@ -1,39 +1,40 @@
 import React, { Component, Fragment } from 'react';
-import Request from '../../helpers/Request.js';
-import EditProjectForm from '../../components/formComponents/editFormComponents/EditProjectForm.js';
+import Request from '../../../helpers/Request.js';
+import EditProjectForm from '../../../components/formComponents/editFormComponents/EditProjectForm.js';
+
 
 
 class EditProjectFormContainer extends Component{
-  constructor(){
+  constructor(props){
     super(props);
     this.state = {
-      project: {}
+      project: null
     }
-    this.handleProjectPost = this.handleProjectPost.bind(this);
+    this.handleProjectPut = this.handleProjectPut.bind(this);
   }
 
+getProject(){
+  const request = new Request();
+  request.get(`/api/projects/${this.props.id}`).then((data) =>{
+      this.setState({project: data})
+  })
+}
 
-  fetchProject(id){
-    let request = new Request();
-    request.get(`/api/projects/${id}`)
-  }
 
   componentDidMount(){
-    fetchProject(this.props.params.id)
-    .then((data) =>{
-      this.setState({project: data})
-    })
+    this.getProject();
   }
 
-  handleProjectPost(project){
+  handleProjectPut(project){
     let request = new Request();
-    request.put('/api/projects', project).then(()=>
-    window.location = '/');
+    request.put(`/api/projects/${this.props.id}`, project).then(() =>{
+        window.location= '/'
+    });
   }
 
   render() {
     return(
-      <EditProjectForm project={this.state.project} handleProjectPost={this.handleProjectPost}/>
+      <EditProjectForm project={this.state.project} handleProjectPut={this.handleProjectPut}/>
     )
   }
 

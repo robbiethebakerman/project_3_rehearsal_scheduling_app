@@ -13,6 +13,7 @@ class ProjectContainer extends Component{
     this.handleDeleteConfirm = this.handleDeleteConfirm.bind(this);
     this.handleDeleteReject = this.handleDeleteReject.bind(this);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
+    this.handleEditClick = this.handleEditClick.bind(this);
   }
 
   getAllProjects() {
@@ -48,10 +49,14 @@ class ProjectContainer extends Component{
     })
   }
 
+  handleEditClick(id){
+    window.location = `/edit-project/${id}/`;
+  }
+
   render(){
     return(
         <div>
-          <ProjectList projects={this.state.projects} handleDeleteClick={this.handleDeleteClick}/>
+          <ProjectList projects={this.state.projects} handleDeleteClick={this.handleDeleteClick} handleEditClick={this.handleEditClick}/>
           {this.state.warningMessage}
         </div>
     );
