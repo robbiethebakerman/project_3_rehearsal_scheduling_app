@@ -15,9 +15,14 @@ class ProjectContainer extends Component{
     })
   }
 
+  handleDelete(project_id) {
+    const request = new Request();
+    request.delete(`/api/projects/${project_id}`);
+  }
+
   render(){
     return(
-      <ProjectList projects={this.state.projects}/>
+      <ProjectList projects={this.state.projects} handleDelete={this.handleDelete}/>
     );
   }
 }
