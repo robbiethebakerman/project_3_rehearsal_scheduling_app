@@ -7,8 +7,8 @@ class EditTaskFormContainer extends Component{
   constructor(props){
     super(props);
     this.state = {
+      rehearsals: [],
       task: null,
-      rehearsals: []
     };
     this.handleTaskPut = this.handleTaskPut.bind(this);
   }
@@ -16,15 +16,18 @@ class EditTaskFormContainer extends Component{
   getAllRehearsals(){
     const request = new Request();
     request.get("/api/rehearsals").then((data) =>{
+      console.log("getallRehearsals", data);
       this.setState({rehearsals: data._embedded.rehearsals})
     })
   }
 
   getTask(){
     const request = new Request();
-    request.get(`/api/task/${this.props.id}`)
+    request.get(`/api/tasks/${this.props.id}`)
     .then((data) => {
+      console.log("gettask", data);
       this.setState({task: data})
+      console.log("state.task", this.state.task);
     })
   }
 
@@ -36,6 +39,7 @@ class EditTaskFormContainer extends Component{
   handleTaskPut(task){
     const request = new Request();
     request.put(`/api/tasks/${this.props.id}`, task).then(() =>{
+      console.log("handleput", task);
         window.location= '/calendar'
     });
   }

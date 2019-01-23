@@ -6,15 +6,16 @@ const EditTaskForm = (props) =>{
       return null;
   }
 
-  const options = props.rehearsals.map((rehearsal, index) =>{
-      return  <option
-                  key={rehearsal.id}
-                  value={rehearsal._links.self.href}>
-                      {rehearsal.name}
-              </option>
-});
+//   const options = props.rehearsals.map((rehearsal, index) =>{
+//       return  <option
+//                 key={rehearsal.id}
+//                   value={rehearsal._links.self.href}>
+//                       {rehearsal.name}
+//               </option>
+// });
 
 function handleSubmit(event){
+  // console.log(props);
     event.preventDefault();
     const task = {
       "id": props.task.id,
@@ -23,21 +24,22 @@ function handleSubmit(event){
       "endTime": event.target.endTime.value,
       "rehearsal": ""
     }
+    props.handleTaskPut(task);
     };
-    props.handleTeamPut(team);
-}
+
+
 
 return(
   <div>
   <form action="/button-type" onSubmit={handleSubmit}>
   <h1>Edit Task</h1>
   <label for="name">Edit name:</label>
-  <input type="datetime-local" id="name" name="name" placeholder={props.task.name} />
+  <input type="datetime-local" id="name" name="name" defaultValue={props.task.name} />
   <label for="startTime">Edit start time:</label>
   <input type="datetime-local" id="startTime" name="startTime" />
   <label for="endTime">Edit end time:</label>
   <input type="datetime-local" id="endTime" name="endTime" />
-  <p>Rehearsal: {props.rehearsal._embedded.project.name}</p>
+  <p> Rehearsal: {props.task._embedded.rehearsal.name}</p>
   <button type="submit">Save</button>
   </form>
   </div>

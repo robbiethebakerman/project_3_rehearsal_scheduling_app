@@ -13,6 +13,7 @@ import NavBar from './NavBar.js';
 import EditTeamFormContainer from "./containers/formContainers/editFormContainers/EditTeamFormContainer";
 import EditMemberFormContainer from "./containers/formContainers/editFormContainers/EditMemberFormContainer";
 import EditRehearsalFormContainer from "./containers/formContainers/editFormContainers/EditRehearsalFormContainer";
+import EditTaskFormContainer from "./containers/formContainers/editFormContainers/EditTaskFormContainer";
 
 class App extends Component {
   render() {
@@ -54,6 +55,10 @@ class App extends Component {
                     <Route exact path="/edit-rehearsal/:id" render={(props) => {
                         const id = props.match.params.id;
                         return <EditRehearsalFormContainer id={id}/>;}
+                    } />
+                    <Route exact path="/edit-task/:id" render={(props) => {
+                        const id = props.match.params.id;
+                        return <EditTaskFormContainer id={id}/>;}
                     } />
                 </Switch>
             </Fragment>
